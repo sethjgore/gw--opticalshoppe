@@ -1,32 +1,88 @@
 header
   @extend .is__background--c-white
 
+//HEADER outer container
 .header__block
   +oc
+
+
+//HEADER LOGO CONTAINER & COLUMN
 .header__logo-box
   +span-columns(2)
+
   +media($tabletopish)
     +span-columns(8)
-
+//HEADER LOGO IMAGE
 .header__logo
-  width: 15rem
-  height: 15rem
   @extend .site-logo
+  width: 6rem
+  height: 6rem
+  @extend %mt-5
+  @extend %mb-5
+
+  +media($tabletopish)
+    width: 9rem
+    height: 9rem
+    +transform(translateY(1.5rem))
+    margin: 0
+
+  +media($laptopish)
+    width: 15rem
+    height: 15rem
+    +transform(translateY(2.5rem))
 
 .hader__nav
   +span-columns(4)
 
-//THE MENU LIST
-ul[role="menu"]
+//NAVIGATION TOGGLE
+
+#header__toggle
   display: none
+
+//LABEL takes place of INPUT checkbox
+label[role="menu-toggle"]
+  @extend .is__this--floating--right
+
+  +media($tabletopish)
+    display: none
+
+  i
+    @extend .is__text--right
+    @extend .is__text--c-gray-light
+
+    padding: .8rem 1rem
+    @extend %mt-9
+
+    border-width: .2rem
+    border-style: solid
+    @extend .is__border--c-gray-light
+
+
+//HIDES the NAV LIST when under $tabletopish bp
+nav[role="menu"]
+  display: none
+
+  +media($tabletopish)
+    display: block
 
 //DO WHEN the Menu Toggler is clicked
 //ACTIVATES using general sibling selector
-#header__toggle:checked ~ ul[role="menu"]
+#header__toggle:checked ~ nav[role="menu"]
   display: block
 
-label[role="menu-toggle"]
+nav
+  +span-columns(4)
+  .nav__menu
+    +row
+
+  .nav__list
+    +span-columns(6)
+    font-size: 2rem
+    +media($tabletopish)
+      +span-columns(3 of 12)
+
 .header__social
+  position: absolute
   li
     @extend .is__this--inline
     @extend .is__text--unbulleted
