@@ -1,0 +1,32 @@
+header
+  @extend .is__background--c-white
+
+.header__block
+  +oc
+.header__logo-box
+  +span-columns(2)
+  +media($tabletopish)
+    +span-columns(8)
+
+.header__logo
+  width: 15rem
+  height: 15rem
+  @extend .site-logo
+
+.hader__nav
+  +span-columns(4)
+
+//THE MENU LIST
+ul[role="menu"]
+  display: none
+
+//DO WHEN the Menu Toggler is clicked
+//ACTIVATES using general sibling selector
+#header__toggle:checked ~ ul[role="menu"]
+  display: block
+
+label[role="menu-toggle"]
+.header__social
+  li
+    @extend .is__this--inline
+    @extend .is__text--unbulleted
