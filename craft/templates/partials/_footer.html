@@ -1,0 +1,54 @@
+<footer class="block__footer">
+  <div class="footer__box">
+
+    <div class="footer__menu-box">
+     {% set entries = craft.entries.find() %}
+        <ul class="footer__menu">
+           {% nav entry in entries %}
+              <li class="footer__list">
+                <a href="{{entry.url}}">
+                  {{ entry.title }}
+                </a>
+              </li>
+            {% endnav %}
+        </ul>
+    </div>
+
+    <div class="footer__services-box">
+      <ul class="footer__services">
+           {% nav entry in entries %}
+              <li class="footer__list">
+                <a href="{{entry.url}}">
+                  {{ entry.title }}
+                </a>
+              </li>
+            {% endnav %}
+        </ul>
+    </div>
+
+    <div class="footer__location-box">
+      <ul class="footer__location">
+        <li><span class="is__text--c-gray-lightt">The Optical Shoppe</span></li>
+        <li>7641 Jefferson Highway</li>
+        <li>Baton Rouge, LA 7080</li>
+        <li>225-928-5798 <span class="is__text--c-gray-darkest">phone</span></li>
+        <li>225-926-2808 <span class="is__text--c-gray-darkest">fax</span></li>
+      </ul>
+    </div>
+
+    <div class="footer__info-box">
+      <div class="footer__info">
+          <ul class="footer__legal">
+            <li>©Copyright 2014. All Rights Reserved.</li>
+            <li><a href=""><span class="legal__item">
+              Terms & Conditions</span></a></li>
+          </ul>
+        <div class="info__social">
+          {% include 'partials/_social.html' %}
+        </div>
+        <div class="info__logo"></div>
+      </div>
+    </div>
+
+  </div>
+</footer>

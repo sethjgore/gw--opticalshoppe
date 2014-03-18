@@ -45,9 +45,10 @@ module.exports = function (grunt) {
 
   // Load the tasks (only those prepended with "grunt-")
   require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks('grunt-newer');
 
   // A task for development
-  grunt.registerTask('default', ['copy:fonts','concurrent:setUpEnv',
+  grunt.registerTask('default', ['newer:copy:fonts','concurrent:setUpEnv',
         'concurrent:watchFiles'
   ]);
 
@@ -58,7 +59,6 @@ module.exports = function (grunt) {
   ]);
 
 };
-
 
 //TEMPORARY FIX for ENDING MAMP WHEN HITS CRTL + C
 var exec = require('child_process').exec;

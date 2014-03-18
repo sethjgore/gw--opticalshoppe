@@ -14,7 +14,7 @@ module.exports = {
     }
   },
   watchFiles:{
-    tasks: ['haml', 'watch'],
+    tasks: ['watch'],
     options: {
             logConcurrentOutput: true
     }

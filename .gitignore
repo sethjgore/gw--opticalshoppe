@@ -51,10 +51,16 @@ node_modules
 bower_components
 .git
 
+#####CMSES##########
+
 #statamic files
 source/_cache/*.*
 source/_cache/**/**/**.*
 
+#craft
+craft/storage/backups/
+craft/storage/runtime/
+craft/storage/userphotos/
 
 #sass junk
 sass/*.css.map

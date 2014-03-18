@@ -1,0 +1,101 @@
+.block__footer
+  @extend .is__background--c-black
+
+.footer__box
+  @extend %pt-3
+  +oc
+
+//centers all elements & removes UL padding when within $mobileish bp
+%footer__mobile
+  +media($mobileish)
+    padding: 0
+    text-align: center
+
+//for UL's in footer
+%footer__list
+  @extend %footer__mobile
+  @extend .is__text--size--milli
+  @extend .is__text--c-gray-dark
+  @extend .is__text--unbulleted
+
+%footer__list--inline
+  li
+    @extend .is__this--inline
+    padding: 0 .5rem
+
+    +media($tabletopish)
+      display: block
+      padding: 0
+
+
+.footer__menu-box, .footer__services-box
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(2)
+
+.footer__menu, .footer__services
+  @extend .is__border--c-gray-medium
+  +media($tabletopish)
+    border-left-width: 1px
+    border-left-style: solid
+    padding-left: 2.8rem
+
+  @extend %footer__list
+  @extend %footer__list--inline
+
+.footer__list
+  @extend .is__this--inline
+
+  +media($tabletopish)
+    display: block
+
+.footer__location-box
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(4)
+
+.footer__location
+  @extend %footer__list
+
+
+.footer__info-box
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(4)
+
+.footer__info
+  ul
+    padding: 0
+
+.footer__legal
+  @extend %footer__list
+  @extend .is__text--right
+
+.legal__item
+  display: block
+
+.info__social
+  +media($tabletopish)
+    display: inline-block
+
+  ul
+    @extend %footer__mobile
+
+  li
+    @extend .is__this--inline
+    @extend .is__text--right
+
+  //social items pulled from partials/_social.html
+
+  .social__item
+    //social media background
+    i:nth-of-type(odd)
+    //social media
+    i:nth-of-type(even)
+
+.info__logo
+  height: 5.5rem
+  width: 5.5rem
+  @extend .site-logo
+  +media($tabletopish)
+    display: inline-block

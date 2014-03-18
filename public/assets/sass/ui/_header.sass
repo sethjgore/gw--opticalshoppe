@@ -1,9 +1,19 @@
 header
   @extend .is__background--c-white
 
+//SETS HEIGHT OF THE HEADER
+//allows easy extending to the nav header so the links can be centered
+%header__height
+  +media($tabletopish)
+    height: 7.5rem
+  +media($laptopish)
+    height: 15rem
+
 //HEADER outer container
 .header__block
   +oc
+  @extend %header__height
+
 
 
 //HEADER LOGO CONTAINER & COLUMN
@@ -11,7 +21,8 @@ header
   +span-columns(2)
 
   +media($tabletopish)
-    +span-columns(8)
+    +span-columns(4 of 12)
+
 //HEADER LOGO IMAGE
 .header__logo
   @extend .site-logo
@@ -31,8 +42,15 @@ header
     height: 15rem
     +transform(translateY(2.5rem))
 
-.hader__nav
+//HEADER NAV CONTAINER & COLUMN
+.header__nav-box
   +span-columns(4)
+  +media($tabletopish)
+    +span-columns(7 of 12)
+  +media($laptopish)
+    +span-columns(6 of 12)
+    +shift(1)
+
 
 //NAVIGATION TOGGLE
 
@@ -59,7 +77,7 @@ label[role="menu-toggle"]
 
 
 //HIDES the NAV LIST when under $tabletopish bp
-nav[role="menu"]
+.nav__box
   display: none
 
   +media($tabletopish)
@@ -70,18 +88,40 @@ nav[role="menu"]
 #header__toggle:checked ~ nav[role="menu"]
   display: block
 
-nav
-  +span-columns(4)
-  .nav__menu
-    +row
+.nav__menu
+  @extend %header__height
 
-  .nav__list
-    +span-columns(6)
-    font-size: 2rem
-    +media($tabletopish)
-      +span-columns(3 of 12)
+  display: flex
+  margin: 0
+
+  flex-flow: column wrap
+  justify-content: space-between
+  align-content: center
+
+  +media($tabletopish)
+    flex-direction: row
+
+.nav__list
+  font-size: 2rem
+  @extend .is__text--unbulleted
+
+
+  a
+
+    @extend .is__border--c-gray-light
+    border-left-width: .1rem
+    border-left-style: solid
+    padding-left: 1.7rem
+
+    &:hover
+      @extend .is__text--c-red
+
+  &:first-child
+    a
+      border: none
 
 .header__social
+  display: none
   position: absolute
   li
     @extend .is__this--inline

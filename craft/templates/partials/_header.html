@@ -4,27 +4,26 @@
     <div class="header__logo-box">
       <div class="header__logo" role="site logo"></div>
     </div>
-    <div role="header__nav">
+    <div class="header__nav-box">
       <input id="header__toggle" type="checkbox"></input>
       <label for="header__toggle" role="menu-toggle">
         <i class="fa fa-bars fa-2x"></i>
       </label>
-      <nav role="menu">
-        <ul class="nav__menu">
-          <li class="nav__list">Frames</li>
-          <li class="nav__list">Lenses</li>
-          <li class="nav__list">About</li>
-          <li class="nav__list">Contact</li>
-        </ul>
+      <nav class="nav__box" role="menu">
+        {% set entries = craft.entries.find() %}
+          <ul class="nav__menu">
+             {% nav entry in entries %}
+                <li class="nav__list">
+                  <a href="{{entry.url}}">
+                    {{ entry.title }}
+                  </a>
+                </li>
+              {% endnav %}
+          </ul>
       </nav>
     </div>
     <div class="header__social" role="social media">
-      <ul>
-        <li class="header__social-item"><i class="fa"></i></li>
-        <li class="header__social-item"><i class="fa"></i></li>
-        <li class="header__social-item"><i class="fa"></i></li>
-        <li class="header__social-item"><i class="fa"></i></li>
-      </ul>
+      {% include 'partials/_social.html' %}
     </div>
   </div>
 </header>
