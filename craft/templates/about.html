@@ -6,47 +6,21 @@
 <section class="block__main">
   <div class="main__box">
     <article class="main__article">
-    	<h2 class="article__heading">
+      <h2 class="article__heading">
         {{ entry.bodyHeadingCopy }}
       </h2>
 
-    	<div class="article__copy">
+      <div class="article__copy">
         {{ entry.bodyCopy }}
       </div>
-
-      <div class="article__goods">
-        {% for item in entry.goods %}
-          <div class="goods__box">
-            <a href="">
-              <img class="goods__image">
-              <div class="goods__text">
-                <div class="goods__symbol">
-                  <i class="fa fa-2x fa-twitter"></i>
-                </div>
-                <div class="goods__heading">
-                  {{item.heading}}
-                </div>
-              </div>
-              <div class="goods__caption">
-                Click to view our eyeglasses!
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
     </article>
-
-
     <aside class="main__storeline">
-
       <div class="storeline__panel">
         <h3 class="storeline__text">
           {{ entry.panelText}}
         </h3>
       </div>
-
       <div class="storeline__collection">
-
         <ul class="storeline__list">
           {% for block in entry.collectionListLeft %}
           <li class="list__item">
@@ -57,7 +31,6 @@
           </li>
           {% endfor %}
         </ul>
-
         <ul class="storeline__list">
            {% for block in entry.collectionListRight %}
           <li class="list__item">
@@ -68,19 +41,15 @@
           </li>
           {% endfor %}
         </ul>
-
       </div>
-
     </aside>
-
-
   </div>
 </section>
-	<!--<ul>
-		{% for entry in craft.entries.section('frames').limit(2).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>-->
+  <!--<ul>
+    {% for entry in craft.entries.section('frames').limit(2).find() %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+    {% endfor %}
+  </ul>-->
 
   {% include 'partials/_aside' %}
 

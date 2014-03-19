@@ -15,6 +15,37 @@
 
   .article__copy
     @extend .is__text--c-white
+
+  .article__goods
+    +row
+
+  .goods__box
+    +span-columns(6)
+    +media($tabletish)
+      +span-columns(4)
+      +shift(1)
+    +media($tabletopish)
+      +span-columns(12)
+      +shift(0)
+    +media($laptopish)
+      +span-columns(6)
+      +shift(0)
+
+  .goods__image
+    @extend .panelGoods__image
+
+  .goods__text
+    @extend .panelGoods__text
+
+  .goods__symbol
+    @extend .panelGoods__symbol
+
+  .goods__heading
+    @extend .panelGoods__heading
+
+  .goods__caption
+    @extend .panelGoods__caption
+
 .main__storeline
   +span-columns(6)
   +media($tabletopish)
@@ -25,3 +56,32 @@
   .storeline__panel
     @extend .component__panel
     @extend %mt-23
+
+  .storeline__text
+    font-size: 2rem
+    margin: 0
+    p
+      margin: 0
+
+.storeline__collection
+  +row
+
+.storeline__list
+  +span-columns(6)
+  +media($tabletish)
+    +span-columns(3)
+  +media($tabletopish)
+    +span-columns(6)
+
+  @extend .is__text--unbulleted
+  padding: 0
+
+  .list__item
+    @extend .is__text--c-gray
+    @extend .is__text--light
+    @extend .is__text--size--micro
+    @extend %pb-25
+
+  .list__heading
+    @extend .is__text--c-white
+    @extend .is__text--bold
