@@ -10,4 +10,5 @@
 return array(
     'devMode' => true,
     'useCompressedJs' => false,
+    //'omitScriptNameInUrls' => true
 );

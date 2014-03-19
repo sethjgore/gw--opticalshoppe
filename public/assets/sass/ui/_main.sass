@@ -1,0 +1,27 @@
+.block__main
+  @extend .is__background--c-gray-medium
+.main__box
+  +oc
+.main__article
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(5)
+  +media($laptopish)
+    +span-columns(7)
+
+  .article__heading
+    @extend .is__text--c-gray
+    @extend .is__text--light
+
+  .article__copy
+    @extend .is__text--c-white
+.main__storeline
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(7)
+  +media($laptopish)
+    +span-columns(5)
+
+  .storeline__panel
+    @extend .component__panel
+    @extend %mt-23

@@ -1,0 +1,29 @@
+.block__moreinfo
+  @extend .is__background--c-white
+
+.moreinfo
+  +oc
+
+%moreinfo__cols
+  +span-columns(6)
+
+.moreinfo__promo, .moreinfo__tour
+  @extend %moreinfo__cols
+
+.moreinfo__promo
+  +media($tabletopish)
+    +span-columns(4)
+.moreinfo__tour
+  +media($tabletopish)
+    +span-columns(5)
+.moreinfo__contact
+  +media($phoneish)
+    +span-columns(6)
+  +media($tabletish)
+    +span-columns(4)
+    +shift(1)
+  +media($tabletopish)
+    +span-columns(3)
+    +shift(0)
+
+

@@ -3,15 +3,50 @@
 
 {% block content %}
 
-	<h1>{{ entry.heading }}</h1>
+<section class="block__main">
+  <div class="main__box">
+    <article class="main__article">
+    	<h2 class="article__heading">
+        {{ entry.bodyHeadingCopy }}
+      </h2>
 
-	{{ entry.body }}
-
-	<h2>Recent News</h2>
-	<ul>
-		{% for entry in craft.entries.section('news').limit(5).find() %}
+    	<div class="article__copy">
+        {{ entry.bodyCopy }}
+      </div>
+    </article>
+    <aside class="main__storeline">
+      <div class="storeline__panel">
+        <h2>
+          Interested in the top Eyewear lines? Check out our brands exclusive to our store in Baton Rouge!
+        </h2>
+      </div>
+      <div class="storeline__collection">
+      <ul class="storeline__list">
+        <li class="list__item">
+          <span class="list__heading">
+            Barton Perreira Eyewear
+          </span>
+          Pure luxury, style and elegance handcrafted to perfection.
+        </li>
+      </ul>
+      <ul class="storeline__list">
+        <li class="list__item">
+          <span class="list__heading">
+            Barton Perreira Eyewear
+          </span>
+          Pure luxury, style and elegance handcrafted to perfection.
+        </li>
+      </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+	<!--<ul>
+		{% for entry in craft.entries.section('frames').limit(2).find() %}
 			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
 		{% endfor %}
-	</ul>
+	</ul>-->
+
+  {% include 'partials/_aside' %}
 
 {% endblock %}
