@@ -2226,7 +2226,7 @@ label[role="menu-toggle"] i {
   font-weight: 800; }
 
 /* line 4, base/is/_is__text.sass */
-.is__text--bold, h1, .component__contact input[type='submit'], .storeline__list .list__heading, .merchitem__image:hover:before, .mDetail__price {
+.is__text--bold, h1, .component__contact input[type='submit'], .promo__hanging, .storeline__list .list__heading, .merchitem__image:hover:before, .mDetail__price {
   font-weight: 700; }
 
 /* line 7, base/is/_is__text.sass */
@@ -2234,7 +2234,7 @@ label[role="menu-toggle"] i {
   font-weight: 600; }
 
 /* line 10, base/is/_is__text.sass */
-.is__text--regular, .promo__hanging {
+.is__text--regular {
   font-weight: 400; }
 
 /* line 13, base/is/_is__text.sass */
@@ -2291,7 +2291,7 @@ label[role="menu-toggle"] i {
   float: left; }
 
 /* line 16, base/is/_is__this.sass */
-.is__this--floating--right, label[role="menu-toggle"], .merchitem__price {
+.is__this--floating--right, .component__contact input[type='submit'], label[role="menu-toggle"], .merchitem__price {
   float: right; }
 
 /* line 19, base/is/_is__this.sass */
@@ -2578,14 +2578,10 @@ a {
   .promo {
     text-align: center; } }
 
-/* line 5, components/_promo.sass */
-.promo__title {
-  margin-bottom: 0; }
-
-/* line 9, components/_promo.sass */
+/* line 8, components/_promo.sass */
 .promo__copy {
   font-size: 2rem; }
-  /* line 11, components/_promo.sass */
+  /* line 10, components/_promo.sass */
   .promo__copy p {
     margin: 0;
     padding: 0; }
@@ -2613,23 +2609,22 @@ a {
 /* line 5, components/_panel-goods.sass */
 .panelGoods__image, .main__article .goods__image {
   height: 18rem;
-  width: 100%;
   display: block; }
 
-/* line 12, components/_panel-goods.sass */
+/* line 10, components/_panel-goods.sass */
 .panelGoods__text, .main__article .goods__text {
   width: 100%; }
 
-/* line 16, components/_panel-goods.sass */
+/* line 14, components/_panel-goods.sass */
 .panelGoods__symbol, .main__article .goods__symbol {
   height: 6rem;
   width: 6rem; }
-  /* line 23, components/_panel-goods.sass */
+  /* line 21, components/_panel-goods.sass */
   .panelGoods__symbol i, .main__article .goods__symbol i {
     padding: 1rem;
     padding-top: 1.4rem; }
 
-/* line 28, components/_panel-goods.sass */
+/* line 26, components/_panel-goods.sass */
 .panelGoods__heading, .main__article .goods__heading {
   font-size: 3.3rem; }
 
@@ -2769,7 +2764,7 @@ label[role="menu-toggle"] i {
   .nav__list a {
     border-left-width: 0.1rem;
     border-left-style: solid;
-    padding-left: 1.9vw; }
+    padding-left: 1.7rem; }
   /* line 120, ui/_header.sass */
   .nav__list:first-child a {
     border: none; }
