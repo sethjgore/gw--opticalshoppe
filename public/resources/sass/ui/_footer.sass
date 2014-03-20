@@ -38,7 +38,7 @@
   +media($tabletopish)
     border-left-width: 1px
     border-left-style: solid
-    padding-left: 2.8rem
+    padding-left: 1.6rem
 
   @extend %footer__list
   @extend %footer__list--inline
@@ -74,16 +74,20 @@
 .legal__item
   display: block
 
+.info__social-box
+  +row
+
 .info__social
+  +span-columns(6)
   +media($tabletopish)
-    display: inline-block
+    +span-columns(10)
 
   ul
     @extend %footer__mobile
-
+    @extend .is__text--right
+    padding-right: .5rem
   li
     @extend .is__this--inline
-    @extend .is__text--right
 
   //social items pulled from partials/_social.html
 
@@ -93,10 +97,19 @@
     //social media
     i:nth-of-type(even)
 
+.info__logo-box
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(2)
+  +media($tabletopish)
+    +span-columns(2)
+
 .info__logo
-  height: 5.5rem
-  width: 5.5rem
+  height: 8.8rem
+  width: 8.8rem
+  margin: 0 auto
   @extend .site-logo
   +media($tabletopish)
+    height: 5.5rem
+    width: 5.5rem
     display: inline-block
-    float: right

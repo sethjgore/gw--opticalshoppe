@@ -2,13 +2,10 @@
   <div class="footer__box">
 
     <div class="footer__menu-box">
-     {% set entries = craft.entries.find() %}
         <ul class="footer__menu">
-           {% nav entry in entries %}
+          {% nav entry in theMenus.mainMenu %}
               <li class="footer__list">
-                <a href="{{entry.url}}">
-                  {{ entry.title }}
-                </a>
+                {{ entry.getLink() }}
               </li>
             {% endnav %}
         </ul>
@@ -16,11 +13,9 @@
 
     <div class="footer__services-box">
       <ul class="footer__services">
-           {% nav entry in entries %}
+           {% nav entry in theMenus.specialMenu %}
               <li class="footer__list">
-                <a href="{{entry.url}}">
-                  {{ entry.title }}
-                </a>
+                {{ entry.getLink() }}
               </li>
             {% endnav %}
         </ul>
@@ -28,7 +23,7 @@
 
     <div class="footer__location-box">
       <ul class="footer__location">
-        <li><span class="is__text--c-gray-lightt">{{ companyInfo.storeName }}</span></li>
+        <li><span class="is__text--c-gray-light">{{ companyInfo.storeName }}</span></li>
         <li>{{ companyInfo.addressFirstLine }}</li>
         <li>{{ companyInfo.addressSecondLine }}</li>
         <li>{{ companyInfo.phoneNumber }}<span class="is__text--c-gray-darkest">phone</span></li>
@@ -43,10 +38,14 @@
             <li><a href=""><span class="legal__item">
               Terms & Conditions</span></a></li>
           </ul>
-        <div class="info__social">
-          {% include 'partials/_social.html' %}
+          <div class="info__social-box">
+            <div class="info__social">
+              {% include 'partials/_social.html' %}
+            </div>
+            <div class="info__logo-box">
+              <div class="info__logo"></div>
+            </div>
         </div>
-        <div class="info__logo"></div>
       </div>
     </div>
 

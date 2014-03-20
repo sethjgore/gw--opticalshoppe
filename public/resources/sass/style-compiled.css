@@ -2259,7 +2259,7 @@ label[role="menu-toggle"] i {
   text-align: left; }
 
 /* line 29, base/is/_is__text.sass */
-.is__text--right, label[role="menu-toggle"] i, .footer__legal, .info__social li, .merchitem__info, .mDetail__price {
+.is__text--right, label[role="menu-toggle"] i, .footer__legal, .info__social ul, .merchitem__info, .mDetail__price {
   text-align: right; }
 
 /* line 32, base/is/_is__text.sass */
@@ -2822,7 +2822,7 @@ label[role="menu-toggle"] i {
   .footer__menu, .footer__services {
     border-left-width: 1px;
     border-left-style: solid;
-    padding-left: 2.8rem; } }
+    padding-left: 1.6rem; } }
 
 @media screen and (min-width: 768px) {
   /* line 46, ui/_footer.sass */
@@ -2877,20 +2877,82 @@ label[role="menu-toggle"] i {
 .legal__item {
   display: block; }
 
-@media screen and (min-width: 768px) {
-  /* line 77, ui/_footer.sass */
-  .info__social {
-    display: inline-block; } }
+/* line 77, ui/_footer.sass */
+.info__social-box {
+  *zoom: 1;
+  display: block; }
+  /* line 17, bourbon/addons/_clearfix.scss */
+  .info__social-box:before, .info__social-box:after {
+    content: " ";
+    display: table; }
+  /* line 23, bourbon/addons/_clearfix.scss */
+  .info__social-box:after {
+    clear: both; }
 
-/* line 96, ui/_footer.sass */
-.info__logo {
-  height: 5.5rem;
-  width: 5.5rem; }
+/* line 80, ui/_footer.sass */
+.info__social {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 100%; }
+  /* line 40, neat/grid/_span-columns.scss */
+  .info__social:last-child {
+    margin-right: 0; }
   @media screen and (min-width: 768px) {
-    /* line 96, ui/_footer.sass */
+    /* line 80, ui/_footer.sass */
+    .info__social {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%; }
+      /* line 40, neat/grid/_span-columns.scss */
+      .info__social:last-child {
+        margin-right: 0; } }
+  /* line 85, ui/_footer.sass */
+  .info__social ul {
+    padding-right: 0.5rem; }
+
+/* line 100, ui/_footer.sass */
+.info__logo-box {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 100%; }
+  /* line 40, neat/grid/_span-columns.scss */
+  .info__logo-box:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    /* line 100, ui/_footer.sass */
+    .info__logo-box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      /* line 40, neat/grid/_span-columns.scss */
+      .info__logo-box:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 768px) {
+    /* line 100, ui/_footer.sass */
+    .info__logo-box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      /* line 40, neat/grid/_span-columns.scss */
+      .info__logo-box:last-child {
+        margin-right: 0; } }
+
+/* line 107, ui/_footer.sass */
+.info__logo {
+  height: 8.8rem;
+  width: 8.8rem;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    /* line 107, ui/_footer.sass */
     .info__logo {
-      display: inline-block;
-      float: right; } }
+      height: 5.5rem;
+      width: 5.5rem;
+      display: inline-block; } }
 
 /* line 7, ui/_aside.sass */
 .moreinfo__promo, .moreinfo__tour {
@@ -2913,8 +2975,12 @@ label[role="menu-toggle"] i {
     .moreinfo__promo:last-child {
       margin-right: 0; } }
 
+/* line 17, ui/_aside.sass */
+.moreinfo__title {
+  margin-bottom: 0; }
+
 @media screen and (min-width: 768px) {
-  /* line 16, ui/_aside.sass */
+  /* line 20, ui/_aside.sass */
   .moreinfo__tour {
     float: left;
     display: block;
@@ -2925,7 +2991,7 @@ label[role="menu-toggle"] i {
       margin-right: 0; } }
 
 @media screen and (min-width: 0px) {
-  /* line 19, ui/_aside.sass */
+  /* line 24, ui/_aside.sass */
   .moreinfo__contact {
     float: left;
     display: block;
@@ -2935,7 +3001,7 @@ label[role="menu-toggle"] i {
     .moreinfo__contact:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 500px) {
-  /* line 19, ui/_aside.sass */
+  /* line 24, ui/_aside.sass */
   .moreinfo__contact {
     float: left;
     display: block;
@@ -2946,7 +3012,7 @@ label[role="menu-toggle"] i {
     .moreinfo__contact:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 768px) {
-  /* line 19, ui/_aside.sass */
+  /* line 24, ui/_aside.sass */
   .moreinfo__contact {
     float: left;
     display: block;
