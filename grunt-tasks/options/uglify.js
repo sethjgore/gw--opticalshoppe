@@ -12,7 +12,7 @@ module.exports = {
       mangle: false
     },
     files: {
-      'public/resources/js/app.js' : ['public/resources/js/script.js']
+      'public/resources/js/app.js' : ['bower_components/jquery/dist/jquery.js', 'bower_components/owlcarousel/owl-carousel/owl.carousel.js' ,'public/resources/js/script.js']
     }
   }
 }

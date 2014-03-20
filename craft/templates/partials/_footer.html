@@ -26,8 +26,25 @@
         <li><span class="is__text--c-gray-light">{{ companyInfo.storeName }}</span></li>
         <li>{{ companyInfo.addressFirstLine }}</li>
         <li>{{ companyInfo.addressSecondLine }}</li>
-        <li>{{ companyInfo.phoneNumber }}<span class="is__text--c-gray-darkest">phone</span></li>
-        <li>{{ companyInfo.faxNumber }}<span class="is__text--c-gray-darkest">fax</span></li>
+        <li>{{ companyInfo.phoneNumber }}<span class="is__text--c-gray-darkest">&nbsp;phone</span></li>
+        <li>{{ companyInfo.faxNumber }}<span class="is__text--c-gray-darkest">&nbsp;fax</span></li>
+      </ul>
+    </div>
+
+    <div class="footer__hours-box">
+      <ul class="footer__hours">
+        <span class="is__text--c-gray-light">Hours of Operation:</span>
+        {% for each in companyInfo.hoursList%}
+          <li>{% if each.type == "openDays" %}
+            <span class="">{{each.day}}</span>
+            {{each.openingTime}}am -
+            {{each.closingTime}}pm
+          {% endif %}
+          {% if each.type == "closedDays" %}
+            {{each.day}} {{each.storeStatus}}
+          {% endif %}
+          </li>
+        {% endfor %}
       </ul>
     </div>
 
@@ -40,7 +57,7 @@
           </ul>
           <div class="info__social-box">
             <div class="info__social">
-              {% include 'partials/_social.html' %}
+              {% include 'partials/_social-footer.html' %}
             </div>
             <div class="info__logo-box">
               <div class="info__logo"></div>

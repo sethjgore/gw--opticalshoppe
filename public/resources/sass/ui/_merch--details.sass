@@ -1,7 +1,17 @@
-.mDetail__gallery
+.mDetail__gallery-box
   +span-columns(6)
+  margin-bottom: 2rem
   +media($tabletopish)
     +span-columns(7)
+    margin-bottom: 0
+
+.mDetail__item
+  img
+    width: 100%
+    max-height: 29rem
+
+    +media($tabletopish)
+      max-height: 35rem
 
 .mDetail__aside
   +span-columns(6)

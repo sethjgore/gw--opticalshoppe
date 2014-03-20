@@ -1,42 +1,44 @@
 <div class="block__merch">
   <div class="merch__box">
-    <div class="mDetail__gallery">
+    <div class="mDetail__gallery-box">
+      <div class="mDetail__gallery owl-carousel" id="slider">
       {% for image in entry.productGallery %}
         <div class="mDetail__item">
           <img src="{{ image.url }}" alt="">
         </div>
       {% endfor %}
     </div>
+  </div>
 
-  <aside class="mDetail__aside">
-    <div class="mDetail__panel">
-      {{entry.itemName}}
-    </div>
-    <div class="mDetail__info-box">
-      <div class="mDetail__serial">
-        {{entry.itemSerial}}
+    <aside class="mDetail__aside">
+      <div class="mDetail__panel">
+        {{entry.itemName}}
       </div>
-      <div class="mDetail__price">
-        {{entry.itemPrice}}
-      </div>
+      <div class="mDetail__info-box">
+        <div class="mDetail__serial">
+          {{entry.itemSerial}}
+        </div>
+        <div class="mDetail__price">
+          {{entry.itemPrice}}
+        </div>
 
-      <div class="mDetail__description">
-        {{entry.bodyCopy}}
-      </div>
+        <div class="mDetail__description">
+          {{entry.bodyCopy}}
+        </div>
 
-      <div class="mDetail__brand">
-        {% for tag in craft.tags.relatedTo(entry) %}
-          {% set currentTag = tag.name %}
-          {% for each in brands.brandDescriptions %}
-            {% for tag in each.brandNameTag %}
-              {% if currentTag == tag.name %}
-                {{each.brandDescription}}
-              {% endif %}
+        <div class="mDetail__brand">
+          {% for tag in craft.tags.relatedTo(entry) %}
+            {% set currentTag = tag.name %}
+            {% for each in brands.brandDescriptions %}
+              {% for tag in each.brandNameTag %}
+                {% if currentTag == tag.name %}
+                  {{each.brandDescription}}
+                {% endif %}
+              {% endfor %}
             {% endfor %}
           {% endfor %}
-        {% endfor %}
+        </div>
       </div>
-    </div>
-  </aside>
+    </aside>
   </div>
 </div>

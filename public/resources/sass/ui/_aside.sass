@@ -12,14 +12,33 @@
 
 .moreinfo__promo
   +media($tabletopish)
-    +span-columns(4)
-
-.moreinfo__title
-  margin-bottom: 0
+    +span-columns(3)
 
 .moreinfo__tour
+  margin-top: 2.5rem
   +media($tabletopish)
-    +span-columns(5)
+    +span-columns(6)
+
+.tour__box
+  position: relative
+
+.tour__panel
+  @extend .panel--small
+  @extend .panel__text--large
+  @extend .is__text--thin
+  position: absolute
+  top: 0
+  left: 0
+  width: 17rem
+  display: block
+  z-index: 10
+
+  height: 4.5rem
+  padding: 1.1rem
+
+.tour__video
+  width: 100%
+  @extend .is__background--c-black
 
 .moreinfo__contact
   +media($phoneish)

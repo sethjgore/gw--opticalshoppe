@@ -1,0 +1,11 @@
+<div class="block__breadcrumbs">
+  <div class="breadcrumbs__box">
+    <h1 class="breadcrumbs__title" role="page title">
+      {% if entry.depth >= 1 %}
+        {% for crumb in entry.getAncestors() %}
+          {{ crumb.getLink() }}
+        {% endfor %}
+      {% endif %}
+    </h1>
+  </div>
+</div>

@@ -31,7 +31,7 @@
 .footer__menu-box, .footer__services-box
   +span-columns(6)
   +media($tabletopish)
-    +span-columns(2)
+    +span-columns(1)
 
 .footer__menu, .footer__services
   @extend .is__border--c-gray-medium
@@ -49,10 +49,18 @@
   +media($tabletopish)
     display: block
 
+.footer__hours-box
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(3)
+
+.footer__hours
+  @extend %footer__list
+
 .footer__location-box
   +span-columns(6)
   +media($tabletopish)
-    +span-columns(4)
+    +span-columns(3)
 
 .footer__location
   @extend %footer__list
@@ -94,8 +102,10 @@
   .social__item
     //social media background
     i:nth-of-type(odd)
+      @extend .is__text--c-gray-dark
     //social media
     i:nth-of-type(even)
+
 
 .info__logo-box
   +span-columns(6)
