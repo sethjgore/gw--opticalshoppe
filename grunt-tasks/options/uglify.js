@@ -12,7 +12,7 @@ module.exports = {
       mangle: false
     },
     files: {
-      'public/assets/js/app.js' : ['public/assets/js/script.js']
+      'public/resources/js/app.js' : ['public/resources/js/script.js']
     }
   }
 }

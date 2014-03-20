@@ -2,6 +2,7 @@
   @extend .is__background--c-gray-medium
 .main__box
   +oc
+
 .main__article
   +span-columns(6)
   +media($tabletopish)
@@ -46,7 +47,7 @@
   .goods__caption
     @extend .panelGoods__caption
 
-.main__storeline
+.main__aside
   +span-columns(6)
   +media($tabletopish)
     +span-columns(7)
@@ -58,10 +59,7 @@
     @extend %mt-23
 
   .storeline__text
-    font-size: 2rem
-    margin: 0
-    p
-      margin: 0
+    @extend .panel__text--large
 
 .storeline__collection
   +row
@@ -73,9 +71,7 @@
   +media($tabletopish)
     +span-columns(6)
 
-  @extend .is__text--unbulleted
-  padding: 0
-
+  @extend .is__list--unformatted
   .list__item
     @extend .is__text--c-gray
     @extend .is__text--light

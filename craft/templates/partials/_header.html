@@ -10,7 +10,7 @@
         <i class="fa fa-bars fa-2x"></i>
       </label>
       <nav class="nav__box" role="menu">
-        {% set entries = craft.entries.find() %}
+        {% set entries = craft.entries %}
           <ul class="nav__menu">
              {% nav entry in entries %}
                 <li class="nav__list">

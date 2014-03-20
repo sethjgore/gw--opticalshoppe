@@ -17,7 +17,7 @@
       <div class="article__goods">
         {% for item in entry.goods %}
           <div class="goods__box">
-            <a href="">
+            <a href="{{ item.linkingPage[0].url }}">
               <img class="goods__image">
               <div class="goods__text">
                 <div class="goods__symbol">
@@ -37,7 +37,7 @@
     </article>
 
 
-    <aside class="main__storeline">
+    <aside class="main__aside">
 
       <div class="storeline__panel">
         <h3 class="storeline__text">

@@ -1,0 +1,132 @@
+.block__merch
+  @extend .is__background--c-gray-medium
+
+.merch__box
+  +oc
+  @extend %pt-25
+
+.merch__items
+  +media($mobileish)
+    +span-columns(4)
+    +shift(1)
+  +media($tabletopish)
+    +span-columns(7)
+  +media($laptopish)
+    +span-columns(8)
+
+  +row
+
+.merchitems__columns
+  +span-columns(6)
+
+  +media($laptopish)
+    +span-columns(6)
+
+
+.merchitems__item
+  width: 23rem
+  padding-bottom: 5rem
+  margin: 0 auto
+
+.merchitem__image
+
+  //positioned because
+  //:before pesudo = absolute
+  position: relative
+
+  img
+    width: 100%
+
+  &:hover
+    &:before
+      content: "view details"
+      @extend .is__text--uppercase
+      @extend .is__text--c-red
+      @extend .is__text--size--milli
+      @extend .is__text--bold
+      @extend .is__text--centered
+      line-height: 4rem
+
+      @extend .is__border--c-red
+      border-width: .5rem
+      border-style: solid
+      background: rgba(255,255,255,.8)
+      height: 4rem
+      width: 13rem
+
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      z-index: 10
+      margin: auto
+
+
+    img
+      position: relative
+
+      &:before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background: rgba(255,255,255,.7)
+
+
+
+
+.merchitem__info
+  width: 16rem
+.merchitem__price
+  width: 6rem
+
+.merch__aside
+  +span-columns(6)
+  +media($tabletish)
+    +span-columns(4)
+    +shift(1)
+  +media($tabletopish)
+    +span-columns(5)
+    +shift(0)
+  +media($laptopish)
+    +span-columns(4)
+
+.merch__panel
+  @extend .component__panel
+.merch__text
+  @extend .panel__text--large
+.merch__collection
+  +row
+
+  +media($mobileish)
+    padding-left: 2.5rem
+  +media($tabletopish)
+    padding-left: 2rem
+
+  .collection__list
+    +span-columns(3)
+    +media($tabletish)
+      +span-columns(3)
+    +media($tabletopish)
+      +span-columns(6)
+
+    @extend .is__list--unformatted
+
+  .collection__item
+    @extend .is__text--c-gray
+    @extend .is__text--light
+    @extend .is__text--size--milli
+    &:before
+      content: "▶"
+      @extend .is__text--c-red
+      font-size: .9rem
+      padding-right:  .7rem
+      @extend .is__this--inline
+
+  .collection__heading
+

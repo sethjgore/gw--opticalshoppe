@@ -10,24 +10,5 @@
 return array(
     'devMode' => true,
     'useCompressedJs' => false,
-    '*' => array(
-        'omitScriptNameInUrls' => true,
-    ),
-    'localhost:9999' => array(
-        'devMode' => true,
-
-        'environmentVariables' => array(
-            'siteUrl'        => 'http://localhost:9999/clients/gatorworks/opticalshoppe',
-            'fileSystemPath' => '/'
-        )
-    ),
-
-    'example.com' => array(
-        'cooldownDuration' => 0,
-
-        'environmentVariables' => array(
-            'siteUrl'        => 'http://example.com/',
-            'fileSystemPath' => '/www/eh12345/'
-        )
-    )
+    'omitScriptNameInUrls'=>true
 );

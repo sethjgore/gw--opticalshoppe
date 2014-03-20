@@ -1,0 +1,60 @@
+<section class="block__merch">
+  <div class="merch__box">
+    <div class="merch__filter">
+      Search
+    </div>
+  </div>
+  <div class="merch__box">
+    <div class="merch__items">
+      {% for item in entry.children %}
+        <div class="merchitems__columns">
+          <article class="merchitems__item">
+            <div class="merchitem__image">
+              <img src="{{ item.simplePhoto[0].url }}" alt="">
+            </div>
+            <div class="merchitem__info">
+              {{ item.itemName}}
+              {{ item.itemSerial }}
+            </div>
+            <div class="merchitem__price">
+              {{ item.itemPrice}}
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+
+    <aside class="merch__aside">
+      <div class="merch__panel">
+        <h3 class="merch__text">
+          {{entry.panelText}}
+        </h3>
+      </div>
+      <div class="merch__collection">
+        <ul class="collection__list">
+          {% for block in entry.collectionListLeft %}
+            <li class="collection__item">
+              <span class="collection__heading">
+                {{block.brandName}}
+              </span>
+              {{block.brandDescription}}
+            </li>
+          {% endfor %}
+        </ul>
+
+        <ul class="collection__list">
+          {% for block in entry.collectionListRight %}
+            <li class="collection__item">
+              <span class="collection__heading">
+                {{block.brandName}}
+              </span>
+              {{block.brandDescription}}
+            </li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </aside>
+
+  </div>
+</section>

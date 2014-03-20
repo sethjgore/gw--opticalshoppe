@@ -14,34 +14,8 @@
         {{ entry.bodyCopy }}
       </div>
     </article>
-    <aside class="main__storeline">
-      <div class="storeline__panel">
-        <h3 class="storeline__text">
-          {{ entry.panelText}}
-        </h3>
-      </div>
-      <div class="storeline__collection">
-        <ul class="storeline__list">
-          {% for block in entry.collectionListLeft %}
-          <li class="list__item">
-            <div class="list__heading">
-              {{block.brandName}}
-            </div>
-            {{block.brandDescription}}
-          </li>
-          {% endfor %}
-        </ul>
-        <ul class="storeline__list">
-           {% for block in entry.collectionListRight %}
-          <li class="list__item">
-            <div class="list__heading">
-              {{block.brandName}}
-            </div>
-              {{block.brandDescription}}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+    <aside class="main__aside about__image-box">
+      <img class="about__image" src="{{ entry.simplePhoto[0].url }}" alt="">
     </aside>
   </div>
 </section>
