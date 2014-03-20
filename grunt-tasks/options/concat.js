@@ -9,11 +9,10 @@ var config = require('../config');
 module.exports = {
   sass: {
     src: [
-          'theme-description.css', 
-          'sass/style.css', 
-          'sass/plugins/owl.carousel.css', 
-          'sass/plugins/owl.theme.css'
+          'public/resources/sass/style.css',
+          'public/resources/sass/plugins/owl.carousel.css',
+          'public/resources/sass/plugins/owl.theme.css'
           ],
-    dest: 'style.css'
+    dest: 'public/resources/sass/style-compiled.css'
   }
 }

@@ -34,6 +34,10 @@
   //:before pesudo = absolute
   position: relative
 
+  &:before,
+  &:after
+    display: none
+
   img
     width: 100%
 
@@ -63,27 +67,51 @@
       z-index: 10
       margin: auto
 
-
-    img
-      position: relative
-
-      &:before
-        content: ""
-        display: block
-        position: absolute
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-        background: rgba(255,255,255,.7)
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background: rgba(255,255,255,.7)
+      z-index: 9
 
 
 
 
 .merchitem__info
-  width: 16rem
+  width: 15rem
+  @extend .is__this--floating--left
+  @extend .is__this--inline
+
+  @extend .is__text--right
+  @extend .is__text--size--nano
+  @extend .is__text--light
+
+  border-right-width: .2rem
+  border-right-style: solid
+  @extend .is__border--c-gray
+  padding-right: 1.2rem
+
+.merchitem__name
+  @extend .is__text--c-white
+
+.merchitem__serial
+  @extend .is__text--c-gray
+  @extend .is__text--uppercase
+
 .merchitem__price
-  width: 6rem
+  width: 7rem
+  @extend .is__this--floating--right
+  @extend .is__this--inline
+  @extend .is__text--c-white
+  @extend .is__text--light
+
+  line-height: 4.6rem
+
+
 
 .merch__aside
   +span-columns(6)

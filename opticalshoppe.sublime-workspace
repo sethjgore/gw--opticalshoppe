@@ -44,91 +44,92 @@
 	"buffers":
 	[
 		{
-			"contents": "/**\n * WATCH tasks configuration\n */\n\n'use strict';\n\nvar config = require('../config');\n\nmodule.exports = {\n  scripts : {\n    files: ['public/assets/js/script.js'],\n    tasks: ['iteruglify']\n  },\n  sass : {\n    files: ['public/assets/sass/**/**/*.{sass, scss}'],\n    tasks : ['sass:dist', 'concat']\n  },\n  livereload: {\n    files: ['craft/templates/**/*.html', '*.php', 'js/**/*.{js,json}', '*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],\n    options: {\n      livereload: true\n    }\n  }\n}\n\n/**\nhamlstatamic : {\n    files: ['haml/*.haml'],\n    tasks : ['newer:haml:layouts', 'newer:haml:templates', 'newer:haml:partials']\n  },\n**/",
-			"file": "grunt-tasks/options/watch.js",
-			"file_size": 626,
-			"file_write_time": 130396082130000000,
+			"contents": "<div class=\"block__merch\">\n  <div class=\"merch__box\">\n    <div class=\"mDetail__gallery\">\n      {% for image in entry.productGallery %}\n        <div class=\"mDetail__item\">\n          <img src=\"{{ image.url }}\" alt=\"\">\n        </div>\n      {% endfor %}\n    </div>\n\n  <aside class=\"mDetail__aside\">\n    <div class=\"mDetail__panel\">\n      {{entry.itemName}}\n    </div>\n    <div class=\"mDetail__info-box\">\n      <div class=\"mDetail__serial\">\n        {{entry.itemSerial}}\n      </div>\n      <div class=\"mDetail__price\">\n        {{entry.itemPrice}}\n      </div>\n      \n      <div class=\"mDetail__description\">\n        {{entry.bodyCopy}}\n      </div>\n      \n      <div class=\"mDetail__brand\">\n\n      </div>\n    </div>\n  </aside>\n  </div>\n</div>",
+			"file": "craft/templates/merch/merchItem.html",
+			"file_size": 721,
+			"file_write_time": 130397950610000000,
 			"settings":
 			{
-				"buffer_size": 630,
+				"buffer_size": 735,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/assets/sass/ui/_aside.sass",
+			"file": "craft/templates/about.html",
 			"settings":
 			{
-				"buffer_size": 461,
+				"buffer_size": 704,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/assets/sass/components/_contact.sass",
+			"file": "public/resources/sass/ui/_merch--details.sass",
 			"settings":
 			{
-				"buffer_size": 575,
+				"buffer_size": 864,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/assets/sass/style.sass",
+			"file": "public/resources/sass/components/_panel.sass",
 			"settings":
 			{
-				"buffer_size": 579,
+				"buffer_size": 296,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"file": "public/resources/sass/base/is/_is__text.sass",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 764,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<aside class=\"block__moreinfo\">\n  <div class=\"moreinfo\">\n\n    <div class=\"moreinfo__promo\">\n      <div class=\"promo\">\n        <h3>50% off section</h3>\n        <p>\n          of new name\n          brand sunglasses\n          and eyeglass\n          frames always,\n          all year round\n        </p>\n      </div>\n    </div>\n\n    <div class=\"moreinfo__tour\">\n      <div class=\"tour\">\n        <img src=\"\" alt=\"\" class=\"tour__video\">\n      </div>\n    </div>\n    <div class=\"moreinfo__contact\">\n      {% include 'partials/_contact.html' %}\n    </div>\n  </div>\n</aside>\n",
-			"file": "craft/templates/partials/_aside.html",
-			"file_size": 563,
-			"file_write_time": 130396247730000000,
+			"contents": "todo\n  add image abpit page",
 			"settings":
 			{
-				"buffer_size": 563,
-				"line_ending": "Unix",
-				"name": "partials"
-			}
-		},
-		{
-			"file": "craft/templates/partials/_footer.html",
-			"settings":
-			{
-				"buffer_size": 1693,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "craft/templates/partials/_header.html",
-			"settings":
-			{
-				"buffer_size": 898,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "todo\n  global set\n  for address & info",
-			"settings":
-			{
-				"buffer_size": 38,
+				"buffer_size": 27,
 				"line_ending": "Unix",
 				"name": "todo"
+			}
+		},
+		{
+			"file": "public/resources/sass/base/_colors.scss",
+			"settings":
+			{
+				"buffer_size": 396,
+				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 129.0,
+		"height": 225.0,
 		"selected_items":
 		[
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"Rename",
+				"File: Rename"
+			],
+			[
+				"twig",
+				"Set Syntax: HTML (Twig)"
+			],
+			[
+				"dupi",
+				"File: Duplicate"
+			],
 			[
 				"syntatwig",
 				"Set Syntax: HTML (Twig)"
@@ -142,10 +143,6 @@
 				"Set Syntax: HTML (Twig)"
 			],
 			[
-				"move",
-				"File: Move"
-			],
-			[
 				"install packa",
 				"Package Control: Install Package"
 			],
@@ -156,10 +153,6 @@
 			[
 				"watch",
 				"HTML: Wrap Selection With Tag"
-			],
-			[
-				"rename",
-				"File: Rename"
 			],
 			[
 				"scheme",
@@ -394,10 +387,6 @@
 				"Project: Edit"
 			],
 			[
-				"dupi",
-				"File: Duplicate"
-			],
-			[
 				"del",
 				"File: Delete"
 			],
@@ -498,7 +487,7 @@
 				"Set Syntax: Sass"
 			]
 		],
-		"width": 551.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -519,134 +508,134 @@
 	},
 	"file_history":
 	[
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/ui/_footer.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_fonts.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_footer.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/concat.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/components/_contact.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_contact.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/CONTRIBUTING.md",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/sass.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/style.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/vendors/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.OverrideAllowedSchemes.txt",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/_includes/tests/stacked-inside-anchor.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_aside.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/services/AssetIndexingService.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/services/AssetsService.php",
 		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/_layout--main.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/vendors/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Core.MaintainLineNumbers.txt",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/ui/_main.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/merch/merchCollection.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_header.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/ui/_header.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/components/_panel.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/Gruntfile.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/concat.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/concurrent.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/watch.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/copy.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/CONTRIBUTING.md",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/owlcarousel/demos/navOnTop.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/helpers/HeaderHelper.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/models/FieldLayoutModel.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/templates/users/_edit/layout.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/assetsourcetypes/LocalAssetSourceType.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/owlcarousel/LICENSE",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/behaviors/AppBehavior.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/merch/merchItem.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/style.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/base/_type--sizing.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/bourbon/css3/_box-sizing.scss",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/sizzle/dist/sizzle.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/tools/SearchIndexTool.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/sass.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/base/_fonts.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/source/fonts/FontAwesome.otf",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/source/fonts/fontawesome-webfont.svg",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_footer.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/package.json",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/base/_colors.scss",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/ui/_merch.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/package.json",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/variables/BaseComponentTypeVariable.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/assets/less/bootstrap-3.0.0/component-animations.less",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/component.json",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/index.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/_merch.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/base/is/_is.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/base/is/_is__text.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/PHPUnit/Framework/Constraint/IsTrue.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/helpers/StringHelper.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/bourbon/addons/_hide-text.scss",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/fieldtypes/ColorFieldType.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/enums/ColumnType.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/sass/base/is/_is__list.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/Tests/_files/structureIsSameButDataIsNot.xml",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/services/ImagesService.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/about.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit-mock-objects/PHPUnit/Framework/MockObject/Verifiable.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/fieldtypes/MultiOptionsFieldData.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/assets/less/bootstrap-3.0.0/type.less",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/vendors/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.TidyLevel.txt",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/test.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/uglify.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/guzzle/guzzle/src/Guzzle/Cache/NullCacheAdapter.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpmailer/phpmailer/language/phpmailer.lang-uk.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/twig/twig/lib/Twig/Node/Expression/GetAttr.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/composer/autoload_namespaces.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/robots.txt",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/widgets/RecentEntriesWidget.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_panelGoods.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/templating/twigextensions/Paginate_Node.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/config/redactor/Simple.json",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/merch/_entry.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CouldNotRewindStreamException.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/assetsourcetypes/GoogleCloudAssetSourceType.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/templates/updates/_go.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit-mock-objects/Tests/_files/GoogleSearch.wsdl",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/i18n/data/en_tt.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/templating/twigextensions/Exit_Node.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/exec.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/merch/_merchCollection.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/merch/_merchItem.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/css/var/getStyles.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/style.css",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/enums/SectionType.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/migrations/m140223_000000_add_missing_element_rows.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/elementtypes/MatrixBlockElementType.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/Makefile",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_scripts.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/resources/js/script.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/web/auth/CUserIdentity.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/vendors/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Core.RemoveInvalidImg.tx",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/logging/CLogRoute.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/ui/_main.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/config/general.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/guzzle/guzzle/src/Guzzle/Http/Message/EntityEnclosingRequest.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_grid.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/merch.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/templating/twigextensions/Namespace_Node.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/3.2.1/assets/less/responsive-navbar.less",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/templating/twigextensions/Redirect_Node.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit-mock-objects/PHPUnit/Framework/MockObject/Stub/ReturnArgument.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/bourbon/functions/_linear-gradient.scss",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/Tests/TextUI/test-suffix-single.phpt",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/_includes/community/submitting-pull-requests.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/assets/js/underscore.min.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/attributes/support.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/ui/_about.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/style.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/haml-statamic.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/assets/js/bootstrap-222.min.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/guzzle/guzzle/src/Guzzle/Batch/AbstractBatchDecorator.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/components/_panel-goods.sass",
 		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_type--sizing.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/is/_is__text.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/is/_is__this.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/index.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_colors.scss",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/Tests/_files/ExceptionInAssertPostConditionsTest.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/_includes/examples/stacked.html",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/services/AssetIndexingService.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/resources/js/MatrixInput.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/components/_panel.sass",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_fonts.sass",
 		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_type--appearance.sass",
 		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/plugins/traffic-light.scss",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/index.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/news/_entry.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_colors.scss",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/haml-statamic.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/errors/ErrorHandler.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/helpers/ErrorHelper.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/exec.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/twig/twig/lib/Twig/Error/Syntax.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/PHPUnit/Framework/SyntheticError.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/selector-native.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/simplepie/simplepie/library/SimplePie/Content/Type/Sniffer.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/migrations/m140223_000000_add_missing_element_rows.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/Makefile",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_header.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_breakpoints.scss",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_breadcrumb.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/translations/fr.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/open.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/less/list.less",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/twig/twig/lib/Twig/LexerInterface.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/assets/less/site/footer.less",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/_includes/footer.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_social.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/ui/_header.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/helpers/HtmlHelper.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/templating/twigextensions/Header_TokenParser.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/fieldtypes/SingleOptionFieldData.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/templates/_components/widgets/Feed/body.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/bourbon/_bourbon-deprecated-upcoming.scss",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/fieldtypes/BaseOptionsFieldType.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/.gitignore",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/Tests/Regression/GitHub/74/Issue74Test.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/Tests/TextUI/group-isolation.phpt",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/_grid.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/fieldtypes/IFieldType.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/PHPUnit/Framework/IncompleteTestError.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/php-file-iterator/File/Iterator.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/Gruntfile.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/watch.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/concurrent.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/templating/twigextensions/Exit_Node.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/i18n/data/en_vi.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/Tests/_files/ExceptionInSetUpTest.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/enums/SectionType.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/records/StructuredEntryRecord.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/package.json",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/enums/PtAccountCredentialStatus.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/vendors/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.AllowedModules.txt",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/lib/HelpSpotAPI.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/twig/twig/lib/Twig/Error/Runtime.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/assets/less/bootstrap-3.0.0/responsive-utilities.less",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/robots.txt",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/attributes/support.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/is/_is__text.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/bourbon/css3/_keyframes.scss",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/vendors/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Attr.AllowedFrameTargets.txt",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/vendors/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/AutoFormat.RemoveSpansWithoutAttributes.tx",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/records/FieldRecord.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/ui/_breadcrumbs.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/less/bordered-pulled.less",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/records/GlobalSetRecord.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/_includes/community/submitting-pull-requests.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/_includes/navbar.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/mockery/mockery/library/Mockery/Matcher/NotAnyOf.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/normalize-scss/normalize.css",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/is/_is__this.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/PHPUnit/Framework/Constraint/IsTrue.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/tools/SearchIndexTool.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/_includes/icons/text-editor.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/helpers/HeaderHelper.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/_includes/examples/bordered-pulled.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/ui/_site-wide.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/img/site-logo.svg",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/templates/_includes/fieldlayoutdesigner.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/guzzle/guzzle/src/Guzzle/Log/ClosureLogAdapter.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/variables/LogoVariable.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/templates/login.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/templating/twigextensions/RequireLogin_TokenParser.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/config/main.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/resources/js/MatrixInput.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/index.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/bower.json",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/templates/partials/_nav.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/templates/_special/breakpointupdate.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/records/BaseRecord.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/errors/HttpException.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/htaccess",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/traversing.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/records/TagRecord.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/test.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/3.2.1/icon/text-width/index.html",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/font-awesome/src/assets/less/site/bootstrap/wells.less",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/guzzle/guzzle/src/Guzzle/Iterator/AppendIterator.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/controllers/InstallController.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/php-token-stream/Tests/_files/classInScopedNamespace.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/css.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/services/ConfigService.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/style.css.map",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/tigershredding.css",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/components/_contact.sass",
 		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/bourbon/css3/_appearance.scss",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/php-code-coverage/scripts/auto_prepend.php",
 		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/js/app.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/base/is/_is__colors.sass",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit-mock-objects/Tests/MockObject/invocation_static_clone_object.phpt",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/Tests/_files/structureIsSameButDataIsNot.xml",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/phpunit/Tests/_files/NonStatic.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/services/ImagesService.php",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/public/assets/sass/bourbon/css3/_box-sizing.scss",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/sizzle/dist/sizzle.js",
-		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/jquery/src/sizzle/dist/sizzle.min.js"
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/vendor/phpunit/php-code-coverage/scripts/auto_prepend.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/etc/state/StatePersister.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/services/ComponentsService.php",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/grunt-tasks/options/open.js",
+		"/Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/craft/app/framework/db/CDbMigration.php"
 	],
 	"find":
 	{
@@ -664,6 +653,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sass/plugin",
+			"left",
+			"   ",
+			"item_",
+			"item",
+			"div",
+			"assets",
+			"div",
+			"h_",
+			"_",
+			"\"",
+			"goodsType",
+			"secondary",
+			"p",
 			"{{",
 			"type=\"text\"",
 			"li class=\"",
@@ -777,21 +780,7 @@
 			".compo",
 			"img/ba",
 			"img",
-			"')",
-			"alt=\"\"></div>",
-			"served",
-			"block__served",
-			"get_bl",
-			"name",
-			"img/ba",
-			"img/b",
-			"message",
-			"served__company",
-			";",
-			"zigzag",
-			";",
-			"&nbsp; &nbsp;",
-			"&nbsp;&nbsp;"
+			"')"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -809,24 +798,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "grunt-tasks/options/watch.js",
+					"file": "craft/templates/merch/merchItem.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 630,
+						"buffer_size": 735,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								121,
-								121
+								735,
+								735
 							]
 						],
 						"settings":
@@ -934,143 +923,44 @@
 								"Python Django": "Python"
 							},
 							"codeintel_tooltips": "popup",
+							"history_list_is_closing": true,
 							"sublime_auto_complete": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
 					"buffer": 1,
-					"file": "public/assets/sass/ui/_aside.sass",
+					"file": "craft/templates/about.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 461,
+						"buffer_size": 704,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								346,
-								346
+								490,
+								490
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"history_list_is_closing": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1083,157 +973,24 @@
 				},
 				{
 					"buffer": 2,
-					"file": "public/assets/sass/components/_contact.sass",
+					"file": "public/resources/sass/ui/_merch--details.sass",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 575,
+						"buffer_size": 864,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								575,
-								575
+								444,
+								444
 							]
 						],
 						"settings":
 						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/assets/sass/style.sass",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 579,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								536,
-								536
-							]
-						],
-						"settings":
-						{
+							"auto_name": "",
 							"codeintel": true,
 							"codeintel_config":
 							{
@@ -1344,62 +1101,28 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "craft/templates/partials/_aside.html",
+					"buffer": 3,
+					"file": "public/resources/sass/components/_panel.sass",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 563,
+						"buffer_size": 296,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								310,
-								310
+								99,
+								99
 							]
 						],
 						"settings":
 						{
-							"auto_name": "partials",
 							"codeintel": true,
 							"codeintel_config":
 							{
@@ -1505,7 +1228,7 @@
 							"codeintel_tooltips": "popup",
 							"history_list_is_closing": true,
 							"sublime_auto_complete": true,
-							"syntax": "Packages/Twig/Syntaxes/HTML (Twig).tmLanguage",
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1513,24 +1236,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "craft/templates/partials/_footer.html",
+					"buffer": 4,
+					"file": "public/resources/sass/base/is/_is__text.sass",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1693,
+						"buffer_size": 764,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1149,
-								1149
+								110,
+								110
 							]
 						],
 						"settings":
@@ -1639,37 +1362,7 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 261.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "craft/templates/partials/_header.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 898,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								868,
-								868
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1677,29 +1370,29 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 8,
+					"buffer": 5,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 38,
+						"buffer_size": 27,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								38,
-								38
+								27,
+								27
 							]
 						],
 						"settings":
@@ -1815,7 +1508,219 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/resources/sass/base/_colors.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 396,
+						"regions":
+						{
+							"gutter_color_104":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/999999.png",
+								"regions":
+								[
+									[
+										104,
+										124
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_125":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/eaeaea.png",
+								"regions":
+								[
+									[
+										125,
+										150
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_151":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/343434.png",
+								"regions":
+								[
+									[
+										151,
+										175
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_176":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/646464.png",
+								"regions":
+								[
+									[
+										176,
+										198
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_199":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/444444.png",
+								"regions":
+								[
+									[
+										199,
+										224
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_225":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/0d0d0d.png",
+								"regions":
+								[
+									[
+										225,
+										243
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_244":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/78cdf0.png",
+								"regions":
+								[
+									[
+										244,
+										273
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_274":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/537bbd.png",
+								"regions":
+								[
+									[
+										274,
+										303
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_304":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/2085c7.png",
+								"regions":
+								[
+									[
+										304,
+										333
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_334":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/cb2027.png",
+								"regions":
+								[
+									[
+										334,
+										363
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_364":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/9c634c.png",
+								"regions":
+								[
+									[
+										364,
+										392
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_53":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/ef4036.png",
+								"regions":
+								[
+									[
+										53,
+										69
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_70":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/ffffff.png",
+								"regions":
+								[
+									[
+										70,
+										85
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_86":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/8c8c8c.png",
+								"regions":
+								[
+									[
+										86,
+										103
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1855,8 +1760,8 @@
 		"cols":
 		[
 			0.0,
-			0.33,
-			0.753470785876,
+			0.411112632125,
+			0.795140455387,
 			1.0
 		],
 		"rows":
@@ -1890,48 +1795,216 @@
 		"selected_items":
 		[
 			[
-				"footer",
-				"templates/partials/_footer.html"
+				"main",
+				"templates/_layout--main.html"
 			],
 			[
-				"contact",
-				"public/assets/sass/components/_contact.sass"
-			],
-			[
-				"stylesass",
-				"public/assets/sass/style.sass"
-			],
-			[
-				"style",
-				"public/assets/sass/style.sass"
-			],
-			[
-				"typesizing",
-				"public/assets/sass/base/_type--sizing.sass"
-			],
-			[
-				"",
-				"templates/news/_entry.html"
-			],
-			[
-				"colors",
-				"public/assets/sass/base/_colors.scss"
-			],
-			[
-				"header",
+				"heade",
 				"templates/partials/_header.html"
 			],
 			[
-				"footersass",
-				"public/assets/sass/ui/_footer.sass"
+				"watch",
+				"opticalshoppe/grunt-tasks/options/watch.js"
+			],
+			[
+				"concurr",
+				"opticalshoppe/grunt-tasks/options/concurrent.js"
+			],
+			[
+				"headerht",
+				"templates/partials/_header.html"
+			],
+			[
+				"layoutmain",
+				"opticalshoppe/craft/templates/_layout--main.html"
+			],
+			[
+				"concat",
+				"opticalshoppe/grunt-tasks/options/concat.js"
+			],
+			[
+				"copy",
+				"opticalshoppe/grunt-tasks/options/copy.js"
+			],
+			[
+				"grunt",
+				"opticalshoppe/Gruntfile.js"
+			],
+			[
+				"about",
+				"opticalshoppe/craft/templates/about.html"
+			],
+			[
+				"colors",
+				"public/resources/sass/base/_colors.scss"
+			],
+			[
+				"mainsass",
+				"public/resources/sass/ui/_main.sass"
+			],
+			[
+				"sizing",
+				"public/resources/sass/base/_type--sizing.sass"
+			],
+			[
+				"panel",
+				"public/resources/sass/components/_panel.sass"
+			],
+			[
+				"stylesass",
+				"public/resources/sass/style.sass"
 			],
 			[
 				"index",
 				"templates/index.html"
 			],
 			[
-				"main",
+				"merchite",
+				"templates/merch/merchItem.html"
+			],
+			[
+				"istext",
+				"public/resources/sass/base/is/_is__text.sass"
+			],
+			[
+				"merchsass",
+				"public/resources/sass/ui/_merch.sass"
+			],
+			[
+				"indx",
+				"templates/index.html"
+			],
+			[
+				"issass",
+				"public/resources/sass/base/is/_is.sass"
+			],
+			[
+				"tylesas",
+				"public/resources/sass/style.sass"
+			],
+			[
+				"uglify",
+				"opticalshoppe/grunt-tasks/options/uglify.js"
+			],
+			[
+				"sass",
+				"opticalshoppe/grunt-tasks/options/sass.js"
+			],
+			[
+				"style",
+				"public/resources/sass/style.sass"
+			],
+			[
+				"mainsas",
+				"public/resources/sass/ui/_main.sass"
+			],
+			[
+				"merchitem",
+				"opticalshoppe/craft/templates/merch/_merchItem.html"
+			],
+			[
+				"entry",
+				"templates/merch/_entry.html"
+			],
+			[
+				"merch",
+				"opticalshoppe/craft/templates/_merch.html"
+			],
+			[
+				"mercite",
+				"templates/merch/_merchItem.html"
+			],
+			[
+				"merchcoll",
+				"templates/merch/_merchCollection.html"
+			],
+			[
+				"cripts",
+				"templates/partials/_scripts.html"
+			],
+			[
+				"footer",
+				"templates/partials/_footer.html"
+			],
+			[
+				"genral",
+				"opticalshoppe/craft/config/general.php"
+			],
+			[
+				"rename",
+				"opticalshoppe/craft/app/etc/templating/twigextensions/Namespace_Node.php"
+			],
+			[
+				"header",
+				"templates/partials/_header.html"
+			],
+			[
+				"heae",
+				"templates/partials/_header.html"
+			],
+			[
+				"stylesas",
+				"public/assets/sass/style.sass"
+			],
+			[
+				"genera",
+				"opticalshoppe/craft/config/general.php"
+			],
+			[
+				"layout",
 				"templates/_layout--main.html"
+			],
+			[
+				"general",
+				"opticalshoppe/craft/config/general.php"
+			],
+			[
+				"",
+				"opticalshoppe/public/assets/sass/components/_panel-goods.sass"
+			],
+			[
+				"panelgoods",
+				"public/assets/sass/components/_panel-goods.sass"
+			],
+			[
+				"typesizing",
+				"public/assets/sass/base/_type--sizing.sass"
+			],
+			[
+				"typeappear",
+				"opticalshoppe/public/assets/sass/base/_type--appearance.sass"
+			],
+			[
+				"contact",
+				"public/assets/sass/components/_contact.sass"
+			],
+			[
+				"typeapp",
+				"public/assets/sass/base/_type--appearance.sass"
+			],
+			[
+				"footersass",
+				"public/assets/sass/ui/_footer.sass"
+			],
+			[
+				"fonts",
+				"public/assets/sass/base/_fonts.sass"
+			],
+			[
+				"sytlesass",
+				"opticalshoppe/public/assets/sass/style.sass"
+			],
+			[
+				"asidesass",
+				"opticalshoppe/public/assets/sass/ui/_aside.sass"
+			],
+			[
+				"hta",
+				"public/htaccess"
+			],
+			[
+				".htac",
+				"opticalshoppe/craft/.htaccess"
 			],
 			[
 				"index.",
@@ -1944,10 +2017,6 @@
 			[
 				"footerh",
 				"templates/partials/_footer.html"
-			],
-			[
-				"layout",
-				"templates/_layout--main.html"
 			],
 			[
 				"social",
@@ -1978,20 +2047,8 @@
 				"opticalshoppe/grunt-tasks/options/watch.js"
 			],
 			[
-				"concurr",
-				"opticalshoppe/grunt-tasks/options/concurrent.js"
-			],
-			[
-				"watch",
-				"opticalshoppe/grunt-tasks/options/watch.js"
-			],
-			[
 				"concurre",
 				"opticalshoppe/grunt-tasks/options/concurrent.js"
-			],
-			[
-				"grunt",
-				"opticalshoppe/Gruntfile.js"
 			],
 			[
 				"package",
@@ -2008,14 +2065,6 @@
 			[
 				"gruntfi",
 				"opticalshoppe/Gruntfile.js"
-			],
-			[
-				"stylesas",
-				"public/assets/sass/style.sass"
-			],
-			[
-				"istext",
-				"public/assets/sass/base/is/_is__text.sass"
 			],
 			[
 				"breadcrumbs",
@@ -2036,10 +2085,6 @@
 			[
 				"isthis",
 				"public/assets/sass/base/is/_is__this.sass"
-			],
-			[
-				"sizing",
-				"public/assets/sass/base/_type--sizing.sass"
 			],
 			[
 				"nav",
@@ -2070,10 +2115,6 @@
 				"public/assets/sass/plugins/traffic-light.scss"
 			],
 			[
-				"fonts",
-				"public/assets/sass/base/_fonts.sass"
-			],
-			[
 				"appearance",
 				"public/assets/sass/base/_type--appearance.sass"
 			],
@@ -2083,10 +2124,6 @@
 			],
 			[
 				"appear",
-				"public/assets/sass/base/_type--appearance.sass"
-			],
-			[
-				"typeapp",
 				"public/assets/sass/base/_type--appearance.sass"
 			],
 			[
@@ -2102,20 +2139,8 @@
 				"public/assets/js/script.js"
 			],
 			[
-				"uglify",
-				"opticalshoppe/grunt-tasks/options/uglify.js"
-			],
-			[
-				"concat",
-				"opticalshoppe/grunt-tasks/options/concat.js"
-			],
-			[
 				"open",
 				"opticalshoppe/grunt-tasks/options/open.js"
-			],
-			[
-				"sass",
-				"opticalshoppe/grunt-tasks/options/sass.js"
 			],
 			[
 				"scripts",
@@ -2134,10 +2159,6 @@
 				"craft/templates/index.html"
 			],
 			[
-				"layoutmain",
-				"craft/templates/_layout--main.html"
-			],
-			[
 				"partials",
 				"craft/templates/partials/_scripts.html"
 			],
@@ -2152,10 +2173,6 @@
 			[
 				"e",
 				"grunt-tasks/options/exec.js"
-			],
-			[
-				"general",
-				"craft/config/general.php"
 			],
 			[
 				"dbphp",
@@ -2288,118 +2305,6 @@
 			[
 				"hader",
 				"tigershredding/header.php"
-			],
-			[
-				"withlogo",
-				"tigershredding/sass/components/_nav-withlogo.sass"
-			],
-			[
-				"withl",
-				"tigershredding/sass/components/_nav-withlogo.sass"
-			],
-			[
-				"navm",
-				"tigershredding/partial/nav-main.php"
-			],
-			[
-				"service",
-				"tigershredding/page-service.php"
-			],
-			[
-				"shredprocess",
-				"tigershredding/sass/ui/_section-shredprocess.sass"
-			],
-			[
-				"tigersh",
-				"tigershredding/js/tigershredding.js"
-			],
-			[
-				"partial/ribbon",
-				"tigershredding/partial/ribbon-services.php"
-			],
-			[
-				"process",
-				"tigershredding/sass/ui/_section-shredprocess.sass"
-			],
-			[
-				"pagecont",
-				"tigershredding/sass/ui/_section-pagecontent.sass"
-			],
-			[
-				"services",
-				"tigershredding/sass/ui/_ribbon-services.sass"
-			],
-			[
-				"pagecon",
-				"tigershredding/sass/ui/_section-pagecontent.sass"
-			],
-			[
-				"about",
-				"tigershredding/page-about.php"
-			],
-			[
-				"servicephp",
-				"tigershredding/page-service.php"
-			],
-			[
-				"pageconte",
-				"tigershredding/sass/ui/_section-pagecontent.sass"
-			],
-			[
-				"pageserv",
-				"tigershredding/page-service.php"
-			],
-			[
-				"ist",
-				"tigershredding/sass/base/is/_is__text.sass"
-			],
-			[
-				"pagetilsas",
-				"tigershredding/sass/ui/_section-pagetitle.sass"
-			],
-			[
-				"sloganph",
-				"tigershredding/partial/section-slogan.php"
-			],
-			[
-				"slog",
-				"tigershredding/sass/ui/_site-logo.sass"
-			],
-			[
-				"slogan",
-				"tigershredding/partial/section-slogan.php"
-			],
-			[
-				"pageser",
-				"tigershredding/page-service.php"
-			],
-			[
-				"iscolo",
-				"tigershredding/sass/base/is/_is__colors.sass"
-			],
-			[
-				"pagetite",
-				"tigershredding/partial/section-pagetitle.php"
-			],
-			[
-				"stylesa",
-				"tigershredding/sass/style.sass"
-			],
-			[
-				"bloglistsas",
-				"tigershredding/sass/ui/_section-bloglist.sass"
-			],
-			[
-				"bloglist",
-				"tigershredding/partial/section-bloglist.php"
-			],
-			[
-				"tiger",
-				"tigershredding/js/tigershredding.js"
-			],
-			[
-				"slider",
-				"tigershredding/sass/ui/_section-slider.sass"
 			]
 		],
 		"width": 0.0
@@ -2410,11 +2315,11 @@
 		"selected_items":
 		[
 			[
-				"tigershred",
+				"tiger",
 				"~/Dropbox/Web/clients/hatchit/tigershredding/wp-content/themes/tigershredding/theme-tigershredding.sublime-project"
 			],
 			[
-				"tiger",
+				"tigershred",
 				"~/Dropbox/Web/clients/hatchit/tigershredding/wp-content/themes/tigershredding/theme-tigershredding.sublime-project"
 			],
 			[
@@ -2502,7 +2407,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 148.0,
 	"status_bar_visible": true,
 	"template_settings":

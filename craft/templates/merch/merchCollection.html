@@ -8,18 +8,24 @@
     <div class="merch__items">
       {% for item in entry.children %}
         <div class="merchitems__columns">
-          <article class="merchitems__item">
-            <div class="merchitem__image">
-              <img src="{{ item.simplePhoto[0].url }}" alt="">
-            </div>
-            <div class="merchitem__info">
-              {{ item.itemName}}
-              {{ item.itemSerial }}
-            </div>
-            <div class="merchitem__price">
-              {{ item.itemPrice}}
-            </div>
-          </article>
+          <a href="{{item.url}}">
+            <article class="merchitems__item">
+              <div class="merchitem__image">
+                <img src="{{ item.simplePhoto[0].url }}" alt="">
+              </div>
+              <div class="merchitem__info">
+                <span class="merchitem__name">
+                  {{ item.itemName}}
+                </span>
+                <span class="merchitem__serial">
+                  {{ item.itemSerial }}
+                </span>
+              </div>
+              <div class="merchitem__price">
+                $ {{ item.itemPrice}}
+              </div>
+            </article>
+          </a>
         </div>
       {% endfor %}
     </div>

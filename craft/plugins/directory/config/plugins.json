@@ -1,0 +1,191 @@
+[
+    {
+        "handle":"analytics",
+        "class":"Analytics",
+        "name":"Analytics",
+        "url":"http://dukt.net/add-ons/craft/analytics",
+        "zip": "http://cl.ly/1b3h0O213b3F/download/analytics.craft-0.9.31.zip",
+        "developer":"Dukt",
+        "developerUrl":"http://dukt.net/",
+        "description":"Easily print Google Analytics tracking code"
+    },
+    {
+        "handle":"automin",
+        "class":"Automin",
+        "name":"AutoMin",
+        "githubUser" : "aelvan",
+        "githubRepo" : "AutoMin-Craft",
+        "developer":"André Elvan",
+        "developerUrl":"http://vaersaagod.no/",
+        "description":"Automates compilation of LESS, and combination and compression of Javascript and CSS, directly from your templates"
+    },
+    {
+        "handle":"cocktailrecipes",
+        "class":"CocktailRecipes",
+        "name":"Cocktail Recipes",
+        "githubUser" : "adrianmacneil",
+        "githubRepo" : "cocktailrecipes",
+        "developer":"Adrian Macneil",
+        "developerUrl":"http://adrianmacneil.com/",
+        "description":"Example plugin for the Craft CMS Beta"
+    },
+    {
+        "handle":"contactform",
+        "class":"ContactForm",
+        "name":"Contact Form",
+        "path":"contactform/",
+        "githubUser":"pixelandtonic",
+        "githubRepo":"ContactForm",
+        "developer":"Pixel & Tonic",
+        "developerUrl":"http://pixelandtonic.com",
+        "description":"Simple email contact form plugin for Craft."
+    },
+    {
+        "handle":"dbug",
+        "class":"Dbug",
+        "name":"Dbug",
+        "developer":"Luke Holder",
+        "developerUrl":"https://github.com/lukeholder/",
+        "githubUser":"lukeholder",
+        "githubRepo":"craft-dbug",
+        "path":"plugins/dbug/",
+        "description":"Visually inspect twig variables and objects in templates."
+    },
+    {
+        "handle":"inflect",
+        "class":"Inflect",
+        "name":"Inflect",
+        "url":"https://github.com/lukeholder/craft-inflect",
+        "zip": "https://dl.dropbox.com/s/805cjdc6mvvv1vx/inflect.zip",
+        "developer":"Luke Holder",
+        "developerUrl":"https://github.com/lukeholder/",
+        "description":"Twig filters to puralize/singularize words"
+    },
+    {
+        "handle":"encodeemail",
+        "class":"EncodeEmail",
+        "name":"Encode Email",
+        "path":"plugins/encodeemail/",
+        "githubUser":"BarrelStrength",
+        "githubRepo":"Craft-EncodeEmail",
+        "developer":"Barrel Strength Design",
+        "developerUrl":"http://barrelstrengthdesign.com",
+        "description":"Adds multiple email obfuscation filters for your templates."
+    },
+    {
+        "handle":"inspector",
+        "class":"Inspector",
+        "name":"Inspector",
+        "description":"Inspect variables in templates",
+        "githubUser":"adrianmacneil",
+        "githubRepo":"craft-inspector",
+        "developer":"Adrian Macneil",
+        "developerUrl":"http://adrianmacneil.com/"
+    },
+    {
+        "handle":"low_date",
+        "class":"Low_date",
+        "name":"Low Date",
+        "path":"low_date/",
+        "githubUser":"lodewijk",
+        "githubRepo":"low_date",
+        "developer":"Lodewijk Schutte",
+        "developerUrl":"http://gotolow.com/",
+        "description":"Simple fieldtype for storing dates"
+    },
+    {
+        "handle":"low_regex",
+        "class":"Low_regex",
+        "name":"Low Regex",
+        "path":"low_regex/",
+        "githubUser":"lodewijk",
+        "githubRepo":"low_regex",
+        "developer":"Lodewijk Schutte",
+        "developerUrl":"http://gotolow.com/",
+        "description":"Adds a preg_replace filter to Twig"
+    },
+    {
+        "handle":"lumberjack",
+        "class":"LumberJack",
+        "name":"LumberJack",
+        "description":"Logger with dashboard backend for viewing and searching logs.",
+        "path":"plugins/lumberjack",
+        "githubUser":"themusicman",
+        "githubRepo":"lumberjack",
+        "developer":"Thomas Brewer",
+        "developerUrl":"http://21purple.com/"
+    },
+    {
+        "handle":"moreinfo",
+        "class":"MoreInfo",
+        "name":"More Info",
+        "path":"plugins/moreinfo/",
+        "githubUser":"BarrelStrength",
+        "githubRepo":"Craft-MoreInfo",
+        "developer":"Barrel Strength Design",
+        "developerUrl":"http://barrelstrengthdesign.com",
+        "description":"Add custom-styled information fieldtypes to your Sections."
+    },
+    {
+        "handle":"nicetime",
+        "class":"Nicetime",
+        "name":"Nice Time",
+        "path":"plugins/nicetime/",
+        "githubUser":"pvledoux",
+        "githubRepo":"blocks-nicetime",
+        "developer":"Pv Ledoux",
+        "developerUrl":"http://www.twitter.com/pvledoux/",
+        "description":"Converts a date to relative time"
+    },
+    {
+        "handle":"seo",
+        "class":"Seo",
+        "name":"SEO",
+        "url":"http://dukt.net/add-ons/craft/seo",
+        "zip": "http://cl.ly/46062A1Y2e2Z/download/seo-craft-0.9.2.zip",
+        "developer":"Dukt",
+        "developerUrl":"http://dukt.net/",
+        "description":"Connect to Google Webmaster Tools"
+    },
+    {
+        "handle":"sourceedit",
+        "class":"SourceEdit",
+        "name":"Source Edit",
+        "url":"https://bitbucket.org/nicholasleblanc/source-edit",
+        "zip": "https://bitbucket.org/nicholasleblanc/source-edit/get/3d800e8b824e.zip",
+        "developer":"Nicholas LeBlanc  ",
+        "developerUrl":"https://bitbucket.org/nicholasleblanc",
+        "description":"Integrate ACE code editor into a block type"
+    },
+    {
+        "handle":"truncate",
+        "class":"Truncate",
+        "name":"Truncate",
+        "githubUser":"nizur",
+        "githubRepo":"truncate",
+        "developer":"Chris Ruzin",
+        "developerUrl":"http://chrisruzin.net/",
+        "description":"A simple Craft CMS plugin/Twig filter"
+    },
+    {
+        "handle":"videos",
+        "class":"Videos",
+        "name":"Videos",
+        "url":"http://dukt.net/craft/videos",
+        "zip": "http://cl.ly/211q1a0Z0r3f/download/videos-craft-0.9.2.zip",
+        "developer":"Dukt",
+        "developerUrl":"http://dukt.net/",
+        "description":"Manage and publish YouTube / Vimeo videos"
+    },
+    {
+        "handle":"weather",
+        "class":"Weather",
+        "name":"Weather",
+        "path":"Weather/",
+        "url":"https://bitbucket.org/ddehaan/craft-weather-plug-in",
+        "zip": "https://bitbucket.org/ddehaan/craft-weather-plug-in/get/master.zip",
+        "developer":"Masuga Design",
+        "developerUrl":"http://masugadesign.com",
+        "description":"Simple plug-in for Yahoo Weather API"
+    }
+]
