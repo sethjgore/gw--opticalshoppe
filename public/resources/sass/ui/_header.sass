@@ -45,6 +45,7 @@ header
 //HEADER NAV CONTAINER & COLUMN
 .header__nav-box
   +span-columns(4)
+  +omega
   +media($tabletopish)
     +span-columns(7 of 12)
   +media($laptopish)
@@ -80,6 +81,12 @@ label[role="menu-toggle"]
 .nav__box
   display: none
 
+  +media($mobileish)
+    position: absolute
+    left: 0
+    top: 7rem
+    z-index: 999
+
   +media($tabletopish)
     display: block
 
@@ -87,6 +94,11 @@ label[role="menu-toggle"]
 //ACTIVATES using general sibling selector
 #header__toggle:checked ~ nav[role="menu"]
   display: block
+
+#header__toggle:checked + label i
+  @extend .is__background--c-gray
+  @extend .is__text--c-white
+  border-color: rgba(0,0,0,0)
 
 .nav__menu
   @extend %header__height
@@ -101,10 +113,30 @@ label[role="menu-toggle"]
   +media($tabletopish)
     flex-direction: row
 
+  @extend .is__background--c-white
+  padding: 0
+
+  +media($mobileish)
+    padding-top: 3rem
+    align-content: stretch
+    width: 100vw
+
+
 .nav__list
   font-size: 2rem
   @extend .is__text--unbulleted
+  @extend .is__border--c-gray
 
+  +media($mobileish)
+    padding: 1.5rem 0rem 3rem 4rem
+    height: 6rem
+
+    border-bottom-style: solid
+    border-bottom-width: 1px
+
+    a
+      border: none !important
+      padding: none !important
 
   a
 

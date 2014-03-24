@@ -3,8 +3,16 @@
     <div class="mDetail__gallery-box">
       <div class="mDetail__gallery owl-carousel" id="slider">
       {% for image in entry.productGallery %}
+
+      {% set imageParams = {
+        width: 575,
+        height: 350,
+        mode: 'crop',
+        position: 'center-center'
+
+      } %}
         <div class="mDetail__item">
-          <img src="{{ image.url }}" alt="">
+          <img src="{{ image.getUrl(imageParams) }}" width="{{ image.getWidth('galleryPicture') }}" height="{{ image.getHeight('galleryPicture') }}" alt="">
         </div>
       {% endfor %}
     </div>

@@ -13,7 +13,7 @@ module.exports = {
   },
   sass : {
     files: ['public/resources/sass/**/**/*.{sass, scss}'],
-    tasks : ['sass:dist', 'concat']
+    tasks : ['sass:dist','autoprefixer', 'concat']
   },
   livereload: {
     files: ['craft/templates/**/*.html', '*.php', 'js/**/*.{js,json}', '*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],

@@ -1,5 +1,7 @@
 .block__main
   @extend .is__background--c-gray-medium
+  @extend %content-pad
+
 .main__box
   +oc
 
@@ -31,6 +33,8 @@
     +media($laptopish)
       +span-columns(6)
       +shift(0)
+
+    @extend %mb-20
 
   .goods__image
     @extend .panelGoods__image

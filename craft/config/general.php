@@ -8,7 +8,11 @@
  */
 
 return array(
-    'devMode' => true,
-    'useCompressedJs' => false,
-    'omitScriptNameInUrls'=>true
+    '*' => array(
+      'omitScriptNameInUrls'=>true
+    ),
+    '0.0.0.0' => array(
+      'devMode' => true,
+      'useCompressedJs' => false,
+    )
 );
