@@ -1881,6 +1881,10 @@
 		"selected_items":
 		[
 			[
+				"dotfi",
+				"~/dotfiles.sublime-project"
+			],
+			[
 				"dotfiles",
 				"~/dotfiles.sublime-project"
 			],
