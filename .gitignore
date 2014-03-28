@@ -61,6 +61,7 @@ source/_cache/**/**/**.*
 craft/storage/backups/
 craft/storage/runtime/
 craft/storage/userphotos/
+build
 
 #sass junk
 sass/*.css.map

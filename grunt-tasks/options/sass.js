@@ -9,7 +9,7 @@ var config = require('../config');
 module.exports = {
   dist: {
     files: {
-      'public/resources/sass/style.css':'public/resources/sass/style.sass'
+      'resources/sass/style.css':'resources/sass/style.sass'
     },
     options: {
       lineNumbers: true,

@@ -8,11 +8,11 @@ var config = require('../config');
 
 module.exports = {
   scripts : {
-    files: ['public/resources/js/script.js'],
+    files: ['resources/js/script.js'],
     tasks: ['uglify']
   },
   sass : {
-    files: ['public/resources/sass/**/**/*.{sass, scss}'],
+    files: ['resources/sass/**/**/*.{sass, scss}'],
     tasks : ['sass:dist','autoprefixer', 'concat']
   },
   livereload: {

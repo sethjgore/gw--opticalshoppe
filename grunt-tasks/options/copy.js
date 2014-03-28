@@ -14,5 +14,5 @@ module.exports = {
     expand: true,
     filter: 'isFile',
     flatten: true
-  }
+  },
 }
