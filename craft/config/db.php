@@ -23,6 +23,12 @@ return array(
 		'user' => 'optical_admin',
 		'password' => 'Thenumber3',
 		'database' => 'optical_shoppe',
-	)
+	),
+	'clients.sjgore.com' => array(
+		'server' => 'db521006607.db.1and1.com',
+		'user' => 'dbo521006607',
+		'password' => 'Thenumber3',
+		'database' => 'db521006607',
+		)
 
 );

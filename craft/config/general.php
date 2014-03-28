@@ -14,5 +14,24 @@ return array(
     '0.0.0.0' => array(
       'devMode' => true,
       'useCompressedJs' => false,
+      'environmentVariables' => array(
+            'siteUrl'        => 'http://0.0.0.0:9999/clients/gatorworks/opticalshoppe/public/',
+            'fileSystemPath' => '/public/'
+        )
+    ),
+    'gww.gwwork.com' => array(
+      'devMode' => true,
+      'useCompressedJs' => false,
+      'environmentVariables' => array(
+            'siteUrl'        => 'http://gww.gwwork.com/~optical/opticalshoppe/public/',
+            'fileSystemPath' => '/public/'
+        )
+    ),
+    'clients.sjgore.com' => array(
+      'useCompressedJs' => false,
+      'environmentVariables' => array(
+            'siteUrl'        => 'http://clients.sjgore.com/opticalshoppe/public/',
+            'fileSystemPath' => '/public/'
+        )
     )
 );

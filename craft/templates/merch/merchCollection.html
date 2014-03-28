@@ -1,13 +1,34 @@
-<section class="block__merch">
-  <div class="merch__box">
-    <div class="merch__filter">
-      Search
+<section class="merch__search-box">
+  <div class="merch__search">
+    <div class="mSearch__title-box" role="product search box">
+      <i class="fa fa-search fa-1x">Find your perfect pair.</i>
+    </div>
+    <div class="mSearch__filter-box">
+      <label class="mSearch__filter-title"><i class="fa fa-sort-alpha-asc"></i><h3>Brands</h3></label>
+      <ul class="mSearch__filter-list" id="merch-filters">
+        <a href="#" data-filter="*" class="selected"><li>Any</li></a>
+        <a href="#" data-filter=".RayBan"><li>Ray Ban</li></a>
+        <a href="#" data-filter=".Aviator"><li>Aviator</li></a>
+      </ul>
+    </div>
+
+    <div class="mSearch__filter-box">
+      <label class="mSearch__filter-title"><i class="fa fa-usd"></i><h3>Pricing</h3></label>
+      <ul class="mSearch__filter-list" id="merch-sorters">
+        <a href="#" data-sort="*" class="selected"><li>Any</li></a>
+        <a href="#" data-sort="price"><li>$</li></a>
+        <a id="merch-priceHigh" href="#" data-sort="price"><li>$$$</li></a>
+      </ul>
     </div>
   </div>
+</section>
+
+<section class="block__merch">
   <div class="merch__box">
-    <div class="merch__items">
+    <div class="merch__items" id="j-product-container">
       {% for item in entry.children %}
-        <div class="merchitems__columns">
+        <div class="merchitems__columns {% for tag in item.itemBrand %}{{tag.name}}{% endfor %}">
+
           <a href="{{item.url}}">
             <article class="merchitems__item">
               <div class="merchitem__image">
@@ -21,12 +42,12 @@
                   {{ item.itemSerial }}
                 </span>
               </div>
-              <div class="merchitem__price">
+              <div class="merchitem__price" data-price="{{item.itemPrice}}">
                 $ {{ item.itemPrice}}
               </div>
             </article>
-          </a>
-        </div>
+
+    </a>    </div>
       {% endfor %}
     </div>
 
