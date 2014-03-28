@@ -4138,7 +4138,9 @@
         navigation: !1,
         slideSpeed: 300,
         paginationSpeed: 400,
-        singleItem: !0
+        singleItem: !0,
+        stopOnHover: !0,
+        autoPlay: 2500
     });
     var $container = $("#j-product-container");
     $container.isotope({
