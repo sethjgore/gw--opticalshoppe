@@ -55,7 +55,12 @@ module.exports = function (grunt) {
   // A task for deployment
   grunt.registerTask('build', [
         'clean',
-        'copy'
+        'copy:build',
+        'rename:htaccess'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'gh-pages'
   ]);
 
 };

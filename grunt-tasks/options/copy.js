@@ -15,4 +15,38 @@ module.exports = {
     filter: 'isFile',
     flatten: true
   },
+  build:{
+    files: [
+      {
+        expand: true,
+        src: [
+          'index.php',
+          'robots.txt',
+          'resources/**',
+          'images/**'
+        ],
+        dest: 'build/',
+        filter: 'isFile'
+      },
+      {
+        expand: true,
+        src:['.htaccess-build'],
+        dest: 'build'
+      },
+      {
+        expand: true,
+        cwd: 'craft',
+        src: [
+          'app/**',
+          'config/**',
+          'plugins/**',
+          'storage/backups/**',
+          'templates/**',
+          'web.config'
+        ],
+        dest: 'build/craft',
+        filter: 'isFile'
+      }
+    ]
+  }
 }

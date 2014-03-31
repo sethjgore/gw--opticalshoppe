@@ -30,7 +30,7 @@ return array(
     'clients.sjgore.com' => array(
       'useCompressedJs' => false,
       'environmentVariables' => array(
-            'siteUrl'        => 'http://clients.sjgore.com/opticalshoppe/',
+            'siteUrl'        => 'http://clients.sjgore.com/',
             'fileSystemPath' => '/'
         )
     )

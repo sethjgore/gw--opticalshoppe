@@ -13,6 +13,6 @@ module.exports = {
           'resources/sass/plugins/owl.carousel.css',
           'resources/sass/plugins/owl.theme.css'
           ],
-    dest: 'resources/sass/style-compiled.css'
+    dest: 'resources/style-compiled.css'
   }
 }
