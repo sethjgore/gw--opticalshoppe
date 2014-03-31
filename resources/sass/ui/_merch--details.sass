@@ -1,0 +1,58 @@
+.mDetail__gallery-box
+  +span-columns(6)
+  margin-bottom: 2rem
+  +media($tabletopish)
+    +span-columns(7)
+    margin-bottom: 0
+
+.mDetail__item
+  img
+    width: 100%
+    max-height: 29rem
+
+    +media($tabletopish)
+      max-height: 35rem
+
+.mDetail__aside
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(5)
+
+.mDetail__panel
+  @extend .panel--small
+  @extend .panel__text--large
+
+.mDetail__info-box
+  padding-left: 1.5rem
+  padding-top: 0.8rem
+  +row
+
+%mDetail__info--text
+  font-size: 1.8rem
+
+.mDetail__serial
+  +span-columns(3)
+  @extend .is__text--c-gray
+  @extend .is__text--uppercase
+
+
+  @extend .is__text--left
+  @extend %mDetail__info--text
+
+.mDetail__price
+  +span-columns(3)
+  +omega
+  @extend .is__text--c-white
+  @extend .is__text--bold
+  @extend .is__text--right
+  @extend %mDetail__info--text
+
+.mDetail__description
+  +span-columns(6)
+  @extend .is__text--c-white
+
+.mDetail__brand
+  +span-columns(6)
+  @extend .is__text--size--milli
+  @extend .is__text--c-gray
+  @extend .is__text--oblique

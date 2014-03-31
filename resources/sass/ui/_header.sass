@@ -1,0 +1,160 @@
+header
+  @extend .is__background--c-white
+
+//SETS HEIGHT OF THE HEADER
+//allows easy extending to the nav header so the links can be centered
+%header__height
+  +media($tabletopish)
+    height: 7.5rem
+  +media($laptopish)
+    height: 15rem
+
+//HEADER outer container
+.header__block
+  +oc
+  @extend %header__height
+
+
+
+//HEADER LOGO CONTAINER & COLUMN
+.header__logo-box
+  +span-columns(2)
+
+  +media($tabletopish)
+    +span-columns(4 of 12)
+
+//HEADER LOGO IMAGE
+.header__logo
+  @extend .site-logo
+  width: 6rem
+  height: 6rem
+  @extend %mt-5
+  @extend %mb-5
+
+  +media($tabletopish)
+    width: 9rem
+    height: 9rem
+    +transform(translateY(1.5rem))
+    margin: 0
+
+  +media($laptopish)
+    width: 15rem
+    height: 15rem
+    +transform(translateY(2.5rem))
+
+//HEADER NAV CONTAINER & COLUMN
+.header__nav-box
+  +span-columns(4)
+  +omega
+  +media($tabletopish)
+    +span-columns(7 of 12)
+  +media($laptopish)
+    +span-columns(6 of 12)
+    +shift(1)
+
+
+//NAVIGATION TOGGLE
+
+#header__toggle
+  display: none
+
+//LABEL takes place of INPUT checkbox
+label[role="menu-toggle"]
+  @extend .is__this--floating--right
+
+  +media($tabletopish)
+    display: none
+
+  i
+    @extend .is__text--right
+    @extend .is__text--c-gray-light
+
+    padding: .8rem 1rem
+    @extend %mt-9
+
+    border-width: .2rem
+    border-style: solid
+    @extend .is__border--c-gray-light
+
+
+//HIDES the NAV LIST when under $tabletopish bp
+.nav__box
+  display: none
+
+  +media($mobileish)
+    position: absolute
+    left: 0
+    top: 7rem
+    z-index: 999
+
+  +media($tabletopish)
+    display: block
+
+//DO WHEN the Menu Toggler is clicked
+//ACTIVATES using general sibling selector
+#header__toggle:checked ~ nav[role="menu"]
+  display: block
+
+#header__toggle:checked + label i
+  @extend .is__background--c-gray
+  @extend .is__text--c-white
+  border-color: rgba(0,0,0,0)
+
+.nav__menu
+  @extend %header__height
+
+  display: flex
+  margin: 0
+
+  flex-flow: column wrap
+  justify-content: space-between
+  align-content: center
+
+  +media($tabletopish)
+    flex-direction: row
+
+  @extend .is__background--c-white
+  padding: 0
+
+  +media($mobileish)
+    padding-top: 3rem
+    align-content: stretch
+    width: 100vw
+
+
+.nav__list
+  font-size: 2rem
+  @extend .is__text--unbulleted
+  @extend .is__border--c-gray
+
+  +media($mobileish)
+    padding: 1.5rem 0rem 3rem 4rem
+    height: 6rem
+
+    border-bottom-style: solid
+    border-bottom-width: 1px
+
+    a
+      border: none !important
+      padding: none !important
+
+  a
+
+    @extend .is__border--c-gray-light
+    border-left-width: .1rem
+    border-left-style: solid
+    padding-left: 1.9vw
+
+    &:hover
+      @extend .is__text--c-red
+
+  &:first-child
+    a
+      border: none
+
+.header__social
+  display: none
+  position: absolute
+  li
+    @extend .is__this--inline
+    @extend .is__text--unbulleted

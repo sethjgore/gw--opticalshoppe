@@ -1,0 +1,29 @@
+.component__contact
+
+  h2
+    @extend .is__text--light
+
+  label
+    display: none
+
+  input
+    @extend .is__background--c-gray-lighter
+
+    @include placeholder
+      @extend .is__text--c-gray-medium
+    display: block
+    padding: 1rem
+    margin: .9rem 0
+    border: 0
+
+  input[type="text"]
+    padding-left: .8rem
+    //respects the width of parent
+    width: 100%
+
+  input[type='submit']
+    @extend .is__text--c-white
+    @extend .is__background--c-red
+    @extend .is__text--bold
+    @extend .is__text--uppercase
+    margin-top: 0

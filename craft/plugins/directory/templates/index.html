@@ -1,0 +1,109 @@
+{% extends "_layouts/cp" %}
+
+{% set title = "Directory"|t %}
+
+{% set content %}
+
+    <table id="sources" class="data collapsible">
+        <thead>
+            <th scope="col">{{ "Plugin"|t }}</th>
+            <th scope="col">{{ "Developer"|t }}</th>
+            <th scope="col">{{ "Description"|t }}</th>
+            <th scope="col">{{ "Status"|t }}</th>
+            <th scope="thin"></th>
+            <th scope="thin"></th>
+        </thead>
+        <tbody>
+            {% for key, plugin in craft.directory.plugins() %}
+
+                {% set pluginComponent = craft.plugins.getPlugin(plugin.class, false) %}
+
+
+                <tr>
+                    <th>
+                        {{plugin.name}}
+                    </th>
+
+
+                    <td>
+                        {% if plugin.developer is defined %}
+                            {% if plugin.developerUrl is defined %}
+                                <a href="{{plugin.developerUrl}}">{{plugin.developer}}</a>
+                            {% else %}
+                                {{plugin.developer}}
+                            {% endif %}
+                        {% endif %}
+                    </td>
+
+                    <td>
+
+                        {% if plugin.description is defined %}
+                            <em class="light">{{plugin.description}}</em>
+                        {% endif %}
+
+                        {#
+                        {% if pluginComponent.version is defined %}
+                            <span class="light">{{pluginComponent.version}}</span>
+                        {% endif %}
+                        #}
+
+
+                    </td>
+
+                    <td class="nowrap">
+                        {%if pluginComponent %}
+                            {% if pluginComponent.isInstalled() %}
+                                {% if pluginComponent.isEnabled() %}
+                                    <span class="status on"></span>Installed
+                                {% else %}
+                                    <span class="status off"></span>
+                                    Disabled
+                                {% endif %}
+                            {% else %}
+                                <span class="status"></span>
+                                Not Installed
+                            {% endif %}
+                        {% else %}
+
+                            <span class="status"></span>
+                            <span class="light">Not installed</span>
+                        {% endif %}
+                    </td>
+
+                    <td>
+                        {% if plugin.url %}
+                            <a class="btn small" href="{{plugin.url}}">Infos</a>
+                        {% elseif plugin.githubUser and plugin.githubRepo %}
+                            <a class="btn small" href="https://github.com/{{plugin.githubUser}}/{{plugin.githubRepo}}">Infos</a>
+                        {% else %}
+                            <span class="btn small">Infos</span>
+                        {% endif %}
+
+                    </td>
+
+
+                    <td>
+                        {% if plugin.isDownloadable and plugin.handle != 'directory' %}
+                            {%if pluginComponent %}
+                                <a href="{{actionUrl('directory/plugin/update', {key:key})}}" class="btn small">Update</a>
+                            {% else %}
+                                <a href="{{actionUrl('directory/plugin/download', {key:key})}}" class="btn small">Install</a>
+                            {% endif %}
+                        {% else %}
+                            <span class="btn small disabled">Install</span>
+                        {% endif %}
+                    </td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br />
+
+    <p>Click "Install" in order to download and install the plugin, or "Update" if you want to replace plugin files with freshest ones.</p>
+
+    <p>Plugins data provided by <a href="http://straightupcraft.com">Straight Up Craft</a>.</p>
+
+
+{% endset %}

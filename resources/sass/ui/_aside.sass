@@ -1,0 +1,53 @@
+.block__moreinfo
+  @extend .is__background--c-white
+
+.moreinfo
+  +oc
+
+%moreinfo__cols
+  +span-columns(6)
+
+.moreinfo__promo, .moreinfo__tour
+  @extend %moreinfo__cols
+
+.moreinfo__promo
+  +media($tabletopish)
+    +span-columns(3)
+
+.moreinfo__tour
+  margin-top: 2.5rem
+  +media($tabletopish)
+    +span-columns(6)
+
+.tour__box
+  position: relative
+
+.tour__panel
+  @extend .panel--small
+  @extend .panel__text--large
+  @extend .is__text--thin
+  position: absolute
+  top: 0
+  left: 0
+  width: 17rem
+  display: block
+  z-index: 10
+
+  height: 4.5rem
+  padding: 1.1rem
+
+.tour__video
+  width: 100%
+  @extend .is__background--c-black
+
+.moreinfo__contact
+  +media($phoneish)
+    +span-columns(6)
+  +media($tabletish)
+    +span-columns(4)
+    +shift(1)
+  +media($tabletopish)
+    +span-columns(3)
+    +shift(0)
+
+

@@ -1,0 +1,70 @@
+<footer class="block__footer">
+  <div class="footer__box">
+
+    <div class="footer__menu-box">
+        <ul class="footer__menu">
+          {% nav entry in theMenus.mainMenu %}
+              <li class="footer__list">
+                {{ entry.getLink() }}
+              </li>
+            {% endnav %}
+        </ul>
+    </div>
+
+    <div class="footer__services-box">
+      <ul class="footer__services">
+           {% nav entry in theMenus.specialMenu %}
+              <li class="footer__list">
+                {{ entry.getLink() }}
+              </li>
+            {% endnav %}
+        </ul>
+    </div>
+
+    <div class="footer__location-box">
+      <ul class="footer__location">
+        <li><span class="is__text--c-gray-light">{{ companyInfo.storeName }}</span></li>
+        <li>{{ companyInfo.addressFirstLine }}</li>
+        <li>{{ companyInfo.addressSecondLine }}</li>
+        <li>{{ companyInfo.phoneNumber }}<span class="is__text--c-gray-darkest">&nbsp;phone</span></li>
+        <li>{{ companyInfo.faxNumber }}<span class="is__text--c-gray-darkest">&nbsp;fax</span></li>
+      </ul>
+    </div>
+
+    <div class="footer__hours-box">
+      <ul class="footer__hours">
+        <span class="is__text--c-gray-light">Hours of Operation:</span>
+        {% for each in companyInfo.hoursList%}
+          <li>{% if each.type == "openDays" %}
+            <span class="">{{each.day}}</span>
+            {{each.openingTime}}am -
+            {{each.closingTime}}pm
+          {% endif %}
+          {% if each.type == "closedDays" %}
+            {{each.day}} {{each.storeStatus}}
+          {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer__info-box">
+      <div class="footer__info">
+          <ul class="footer__legal">
+            <li>©Copyright 2014. All Rights Reserved.</li>
+            <li><a href=""><span class="legal__item">
+              Terms & Conditions</span></a></li>
+          </ul>
+          <div class="info__social-box">
+            <div class="info__social">
+              {% include 'partials/_social-footer.html' %}
+            </div>
+            <div class="info__logo-box">
+              <div class="info__logo"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>

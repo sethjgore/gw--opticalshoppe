@@ -1,0 +1,30 @@
+
+{% extends "_layout--main" %}
+
+{% block content %}
+
+<section class="block__main">
+  <div class="main__box">
+    <article class="main__article">
+      <h2 class="article__heading">
+        {{ entry.bodyHeadingCopy }}
+      </h2>
+
+      <div class="article__copy">
+        {{ entry.bodyCopy }}
+      </div>
+    </article>
+    <aside class="main__aside about__image-box">
+      <img class="about__image" src="{{ entry.simplePhoto[0].url }}" alt="">
+    </aside>
+  </div>
+</section>
+  <!--<ul>
+    {% for entry in craft.entries.section('frames').limit(2).find() %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+    {% endfor %}
+  </ul>-->
+
+  {% include 'partials/_aside' %}
+
+{% endblock %}

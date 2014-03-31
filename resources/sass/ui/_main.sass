@@ -1,0 +1,87 @@
+.block__main
+  @extend .is__background--c-gray-medium
+  @extend %content-pad
+
+.main__box
+  +oc
+
+.main__article
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(5)
+  +media($laptopish)
+    +span-columns(7)
+
+  .article__heading
+    @extend .is__text--c-gray
+    @extend .is__text--light
+
+  .article__copy
+    @extend .is__text--c-white
+
+  .article__goods
+    +row
+
+  .goods__box
+    +span-columns(6)
+    +media($tabletish)
+      +span-columns(4)
+      +shift(1)
+    +media($tabletopish)
+      +span-columns(12)
+      +shift(0)
+    +media($laptopish)
+      +span-columns(6)
+      +shift(0)
+
+    @extend %mb-20
+
+  .goods__image
+    @extend .panelGoods__image
+
+  .goods__text
+    @extend .panelGoods__text
+
+  .goods__symbol
+    @extend .panelGoods__symbol
+
+  .goods__heading
+    @extend .panelGoods__heading
+
+  .goods__caption
+    @extend .panelGoods__caption
+
+.main__aside
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(7)
+  +media($laptopish)
+    +span-columns(5)
+
+  .storeline__panel
+    @extend .component__panel
+    @extend %mt-23
+
+  .storeline__text
+    @extend .panel__text--large
+
+.storeline__collection
+  +row
+
+.storeline__list
+  +span-columns(6)
+  +media($tabletish)
+    +span-columns(3)
+  +media($tabletopish)
+    +span-columns(6)
+
+  @extend .is__list--unformatted
+  .list__item
+    @extend .is__text--c-gray
+    @extend .is__text--light
+    @extend .is__text--size--micro
+    @extend %pb-25
+
+  .list__heading
+    @extend .is__text--c-white
+    @extend .is__text--bold

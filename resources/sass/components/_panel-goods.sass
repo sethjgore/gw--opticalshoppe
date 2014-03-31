@@ -1,0 +1,40 @@
+.component__panelGoods
+
+// Requires to be inside a column or a form of width constrainment in order to be a square.
+
+.panelGoods__image
+  height: 18rem
+  width: 100%
+
+  @extend .is__background--c-gray-darkest
+  display: block
+
+.panelGoods__text
+  @extend .is__background--c-black
+  width: 100%
+
+.panelGoods__symbol
+  @extend .is__background--c-red
+  @extend .is__this--inline
+  @extend .is__text--centered
+  height: 6rem
+  width: 6rem
+
+  i
+    padding: 1rem
+    padding-top: 1.4rem
+    @extend .is__text--c-white
+
+.panelGoods__heading
+  @extend .is__this--inline
+  @extend .is__text--c-white
+  @extend .is__text--thin
+  font-size: 3.3rem
+  @extend %pl-17
+
+.panelGoods__caption
+  @extend .is__text--size--milli
+  @extend .is__text--c-gray-light
+  @extend .is__text--centered
+  @extend .is__text--thin
+  @extend .is__text--oblique
