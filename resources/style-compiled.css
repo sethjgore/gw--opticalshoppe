@@ -2641,9 +2641,9 @@ a {
 .panelGoods__heading, .main__article .goods__heading {
   font-size: 3.3rem; }
 
-/* line 3, ui/_site-wide.sass */
+/* line 4, ui/_site-wide.sass */
 .site-logo, .header__logo, .info__logo {
-  background: url("../img/site-logo.svg") center no-repeat;
+  background: url("img/site-logo.svg") center no-repeat;
   background-size: contain; }
 
 @media screen and (min-width: 768px) {
