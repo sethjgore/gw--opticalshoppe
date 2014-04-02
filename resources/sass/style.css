@@ -1084,8 +1084,11 @@ label[role="menu-toggle"] i {
   /* line 154, ui/_header.sass */
   .nav__list:first-child a {
     border: none; }
+  /* line 157, ui/_header.sass */
+  .nav__list:last-child {
+    box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.5); }
 
-/* line 157, ui/_header.sass */
+/* line 160, ui/_header.sass */
 .header__social {
   display: none;
   position: absolute; }
@@ -1658,14 +1661,18 @@ label[role="menu-toggle"] i {
 
 /* line 34, ui/_merch.sass */
 .merchitem__image {
-  position: relative; }
-  /* line 40, ui/_merch.sass */
+  position: relative;
+  height: 11.2rem;
+  background: white;
+  padding: 1.6rem;
+  margin-bottom: 1.2rem; }
+  /* line 44, ui/_merch.sass */
   .merchitem__image:before, .merchitem__image:after {
     display: none; }
-  /* line 44, ui/_merch.sass */
+  /* line 48, ui/_merch.sass */
   .merchitem__image img {
     width: 100%; }
-  /* line 48, ui/_merch.sass */
+  /* line 52, ui/_merch.sass */
   .merchitem__image:hover:before {
     content: "view details";
     line-height: 4rem;
@@ -1682,7 +1689,7 @@ label[role="menu-toggle"] i {
     right: 0;
     z-index: 10;
     margin: auto; }
-  /* line 73, ui/_merch.sass */
+  /* line 77, ui/_merch.sass */
   .merchitem__image:hover:after {
     content: "";
     display: block;
@@ -1694,19 +1701,19 @@ label[role="menu-toggle"] i {
     background: rgba(255, 255, 255, 0.7);
     z-index: 9; }
 
-/* line 87, ui/_merch.sass */
+/* line 91, ui/_merch.sass */
 .merchitem__info {
   width: 15rem;
   border-right-width: 0.2rem;
   border-right-style: solid;
   padding-right: 1.2rem; }
 
-/* line 108, ui/_merch.sass */
+/* line 112, ui/_merch.sass */
 .merchitem__price {
   width: 7rem;
   line-height: 4.6rem; }
 
-/* line 119, ui/_merch.sass */
+/* line 123, ui/_merch.sass */
 .merch__aside {
   float: left;
   display: block;
@@ -1716,7 +1723,7 @@ label[role="menu-toggle"] i {
   .merch__aside:last-child {
     margin-right: 0; }
   @media screen and (min-width: 500px) {
-    /* line 119, ui/_merch.sass */
+    /* line 123, ui/_merch.sass */
     .merch__aside {
       float: left;
       display: block;
@@ -1727,7 +1734,7 @@ label[role="menu-toggle"] i {
       .merch__aside:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 768px) {
-    /* line 119, ui/_merch.sass */
+    /* line 123, ui/_merch.sass */
     .merch__aside {
       float: left;
       display: block;
@@ -1738,7 +1745,7 @@ label[role="menu-toggle"] i {
       .merch__aside:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 900px) {
-    /* line 119, ui/_merch.sass */
+    /* line 123, ui/_merch.sass */
     .merch__aside {
       float: left;
       display: block;
@@ -1748,7 +1755,7 @@ label[role="menu-toggle"] i {
       .merch__aside:last-child {
         margin-right: 0; } }
 
-/* line 134, ui/_merch.sass */
+/* line 138, ui/_merch.sass */
 .merch__collection {
   *zoom: 1;
   display: block; }
@@ -1760,14 +1767,14 @@ label[role="menu-toggle"] i {
   .merch__collection:after {
     clear: both; }
   @media screen and (min-width: 0px) and (max-width: 767px) {
-    /* line 134, ui/_merch.sass */
+    /* line 138, ui/_merch.sass */
     .merch__collection {
       padding-left: 2.5rem; } }
   @media screen and (min-width: 768px) {
-    /* line 134, ui/_merch.sass */
+    /* line 138, ui/_merch.sass */
     .merch__collection {
       padding-left: 2rem; } }
-  /* line 142, ui/_merch.sass */
+  /* line 146, ui/_merch.sass */
   .merch__collection .collection__list {
     float: left;
     display: block;
@@ -1777,7 +1784,7 @@ label[role="menu-toggle"] i {
     .merch__collection .collection__list:last-child {
       margin-right: 0; }
     @media screen and (min-width: 500px) {
-      /* line 142, ui/_merch.sass */
+      /* line 146, ui/_merch.sass */
       .merch__collection .collection__list {
         float: left;
         display: block;
@@ -1787,7 +1794,7 @@ label[role="menu-toggle"] i {
         .merch__collection .collection__list:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 768px) {
-      /* line 142, ui/_merch.sass */
+      /* line 146, ui/_merch.sass */
       .merch__collection .collection__list {
         float: left;
         display: block;
@@ -1796,7 +1803,7 @@ label[role="menu-toggle"] i {
         /* line 40, neat/grid/_span-columns.scss */
         .merch__collection .collection__list:last-child {
           margin-right: 0; } }
-  /* line 155, ui/_merch.sass */
+  /* line 159, ui/_merch.sass */
   .merch__collection .collection__item:before {
     content: "▶";
     font-size: 0.9rem;
