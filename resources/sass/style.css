@@ -852,7 +852,7 @@ a {
 .component__contact input[type='submit'] {
   margin-top: 0; }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
   /* line 1, components/_promo.sass */
   .promo {
     text-align: center; } }
@@ -1021,7 +1021,7 @@ label[role="menu-toggle"] i {
 /* line 81, ui/_header.sass */
 .nav__box {
   display: none; }
-  @media screen and (min-width: 0px) and (max-width: 768px) {
+  @media screen and (min-width: 0px) and (max-width: 767px) {
     /* line 81, ui/_header.sass */
     .nav__box {
       position: absolute;
@@ -1053,7 +1053,7 @@ label[role="menu-toggle"] i {
     /* line 103, ui/_header.sass */
     .nav__menu {
       flex-direction: row; } }
-  @media screen and (min-width: 0px) and (max-width: 768px) {
+  @media screen and (min-width: 0px) and (max-width: 767px) {
     /* line 103, ui/_header.sass */
     .nav__menu {
       padding-top: 3rem;
@@ -1064,7 +1064,7 @@ label[role="menu-toggle"] i {
 /* line 126, ui/_header.sass */
 .nav__list {
   font-size: 2rem; }
-  @media screen and (min-width: 0px) and (max-width: 768px) {
+  @media screen and (min-width: 0px) and (max-width: 767px) {
     /* line 126, ui/_header.sass */
     .nav__list {
       padding: 1.5rem 0rem 3rem 4rem;
@@ -1098,7 +1098,7 @@ label[role="menu-toggle"] i {
 .breadcrumbs__title {
   margin-top: 1.7em; }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
   /* line 9, ui/_footer.sass */
   .footer__menu, .footer__services, .footer__hours, .footer__location, .footer__legal, .info__social ul {
     padding: 0;
@@ -1113,7 +1113,7 @@ label[role="menu-toggle"] i {
       display: block;
       padding: 0; } }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
   /* line 32, ui/_footer.sass */
   .footer__menu li, .footer__services li {
     border-left: solid 1px #383838;
@@ -1589,7 +1589,7 @@ label[role="menu-toggle"] i {
 .merch__items {
   *zoom: 1;
   display: block; }
-  @media screen and (min-width: 0px) and (max-width: 768px) {
+  @media screen and (min-width: 0px) and (max-width: 767px) {
     /* line 9, ui/_merch.sass */
     .merch__items {
       float: left;
@@ -1759,7 +1759,7 @@ label[role="menu-toggle"] i {
   /* line 23, bourbon/addons/_clearfix.scss */
   .merch__collection:after {
     clear: both; }
-  @media screen and (min-width: 0px) and (max-width: 768px) {
+  @media screen and (min-width: 0px) and (max-width: 767px) {
     /* line 134, ui/_merch.sass */
     .merch__collection {
       padding-left: 2.5rem; } }
