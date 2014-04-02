@@ -108,7 +108,7 @@ label[role="menu-toggle"]
 
   flex-flow: column wrap
   justify-content: space-between
-  align-content: center
+  align-items: center
 
   +media($tabletopish)
     flex-direction: row
@@ -120,6 +120,7 @@ label[role="menu-toggle"]
     padding-top: 3rem
     align-content: stretch
     width: 100vw
+    flex-direction: column
 
 
 .nav__list
@@ -130,6 +131,7 @@ label[role="menu-toggle"]
   +media($mobileish)
     padding: 1.5rem 0rem 3rem 4rem
     height: 6rem
+    width: 100%
 
     border-bottom-style: solid
     border-bottom-width: 1px

@@ -48,7 +48,7 @@
   +media($tabletopish)
     border-left-width: 1px
     border-left-style: solid
-    padding-left: 1.6rem
+    padding-left: .5rem
 
   @extend %footer__list
   @extend %footer__list--inline
@@ -63,6 +63,8 @@
 .footer__hours-box
   +span-columns(6)
   +media($tabletopish)
+    +span-columns(4)
+  +media($laptopish)
     +span-columns(3)
 
 .footer__hours
@@ -80,6 +82,8 @@
 .footer__info-box
   +span-columns(6)
   +media($tabletopish)
+    +span-columns(3)
+  +media($laptopish)
     +span-columns(4)
 
 .footer__info
@@ -99,12 +103,16 @@
 .info__social
   +span-columns(6)
   +media($tabletopish)
+    +span-columns(12)
+  +media($laptopish)
     +span-columns(10)
 
   ul
     @extend %footer__mobile
     @extend .is__text--right
-    padding-right: .5rem
+
+    +media($laptopish)
+      padding-right: .5rem
   li
     @extend .is__this--inline
 
@@ -121,8 +129,8 @@
 .info__logo-box
   +span-columns(6)
   +media($tabletopish)
-    +span-columns(2)
-  +media($tabletopish)
+    +span-columns(12)
+  +media($laptopish)
     +span-columns(2)
 
 .info__logo
@@ -134,3 +142,6 @@
     height: 5.5rem
     width: 5.5rem
     display: inline-block
+    float: right
+  +media($laptopish)
+    float: left

@@ -202,6 +202,7 @@ figure {
 /* line 341, /Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/normalize-scss/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -320,6 +321,8 @@ input {
 /* line 476, /Users/user/Dropbox/Web/clients/gatorworks/opticalshoppe/bower_components/normalize-scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -915,6 +918,7 @@ a {
 /* line 4, ui/_site-wide.sass */
 .site-logo, .header__logo, .info__logo {
   background: url("img/site-logo.svg") center no-repeat;
+  -webkit-background-size: contain;
   background-size: contain; }
 
 @media screen and (min-width: 768px) {
@@ -956,9 +960,7 @@ a {
       width: 9rem;
       height: 9rem;
       -webkit-transform: translateY(1.5rem);
-      -moz-transform: translateY(1.5rem);
       -ms-transform: translateY(1.5rem);
-      -o-transform: translateY(1.5rem);
       transform: translateY(1.5rem);
       margin: 0; } }
   @media screen and (min-width: 900px) {
@@ -967,9 +969,7 @@ a {
       width: 15rem;
       height: 15rem;
       -webkit-transform: translateY(2.5rem);
-      -moz-transform: translateY(2.5rem);
       -ms-transform: translateY(2.5rem);
-      -o-transform: translateY(2.5rem);
       transform: translateY(2.5rem); } }
 
 /* line 46, ui/_header.sass */
@@ -1043,22 +1043,43 @@ label[role="menu-toggle"] i {
 
 /* line 103, ui/_header.sass */
 .nav__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0; }
   @media screen and (min-width: 768px) {
     /* line 103, ui/_header.sass */
     .nav__menu {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
       flex-direction: row; } }
   @media screen and (min-width: 0px) and (max-width: 768px) {
     /* line 103, ui/_header.sass */
     .nav__menu {
       padding-top: 3rem;
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
       align-content: stretch;
       width: 100vw;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column; } }
 
 /* line 126, ui/_header.sass */
@@ -1968,7 +1989,6 @@ label[role="menu-toggle"] i {
 /* line 1, ui/_onLoad.sass */
 body {
   -webkit-transition: opacity 1s ease-in 0s;
-  -moz-transition: opacity 1s ease-in 0s;
   transition: opacity 1s ease-in 0s;
   opacity: 0; }
   /* line 4, ui/_onLoad.sass */
@@ -1978,7 +1998,6 @@ body {
 /* line 8, ui/_onLoad.sass */
 .onLoad body {
   -webkit-transition: opacity 1s ease-in 0s;
-  -moz-transition: opacity 1s ease-in 0s;
   transition: opacity 1s ease-in 0s;
   opacity: 1; }
 
@@ -2003,6 +2022,7 @@ body {
     font-size: .6rem;
     font-family: "Helvetica Neue", "Helvetica", sans-serif;
     text-transform: uppercase;
+    -webkit-box-shadow: 0px 1px 0px #8c8c8c, 0px 2px 0px #8c8c8c, 0px 3px 0px #8c8c8c, 0px 4px 0px #8c8c8c, 0px 5px 0px #8c8c8c;
     box-shadow: 0px 1px 0px #8c8c8c, 0px 2px 0px #8c8c8c, 0px 3px 0px #8c8c8c, 0px 4px 0px #8c8c8c, 0px 5px 0px #8c8c8c; }
     @media only screen and (min-width: 0rem) {
       /* line 15, plugins/traffic-light.scss */
@@ -2066,4 +2086,4 @@ body {
     #wp-admin-bar-site-name a:after:after {
       content: "cinemaish"; } }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style-prefixed.css.map */

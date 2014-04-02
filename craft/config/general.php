@@ -19,6 +19,14 @@ return array(
             'fileSystemPath' => '/'
         )
     ),
+    '192.168.0.6' => array(
+      'devMode' => true,
+      'useCompressedJs' => false,
+      'environmentVariables' => array(
+            'siteUrl'        => 'http://192.0.168.6:9999/clients/gatorworks/opticalshoppe/',
+            'fileSystemPath' => '/'
+        )
+    ),
     'gww.gwwork.com' => array(
       'devMode' => true,
       'useCompressedJs' => false,
