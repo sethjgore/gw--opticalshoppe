@@ -1096,19 +1096,19 @@ label[role="menu-toggle"] i {
       /* line 139, ui/_header.sass */
       .nav__list a {
         border: none !important;
-        padding: none !important; } }
-  /* line 143, ui/_header.sass */
+        padding: none !important; }
+      /* line 143, ui/_header.sass */
+      .nav__list:last-child {
+        -webkit-box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.5); } }
+  /* line 146, ui/_header.sass */
   .nav__list a {
     border-left-width: 0.1rem;
     border-left-style: solid;
     padding-left: 1.9vw; }
-  /* line 154, ui/_header.sass */
+  /* line 157, ui/_header.sass */
   .nav__list:first-child a {
     border: none; }
-  /* line 157, ui/_header.sass */
-  .nav__list:last-child {
-    -webkit-box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
-    box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.5); }
 
 /* line 160, ui/_header.sass */
 .header__social {

@@ -140,6 +140,9 @@ label[role="menu-toggle"]
       border: none !important
       padding: none !important
 
+    &:last-child
+      box-shadow: 0 1rem 0.5rem rgba(0,0,0,.5)
+
   a
 
     @extend .is__border--c-gray-light
@@ -153,9 +156,6 @@ label[role="menu-toggle"]
   &:first-child
     a
       border: none
-
-  &:last-child
-    box-shadow: 0 1rem 0.5rem rgba(0,0,0,.5)
 
 .header__social
   display: none
