@@ -49,6 +49,7 @@ module.exports = function (grunt) {
 
   // A task for development
   grunt.registerTask('default', ['newer:copy:fonts','concurrent:setUpEnv',
+
         'concurrent:watchFiles'
   ]);
 

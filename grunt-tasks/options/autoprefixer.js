@@ -7,7 +7,7 @@
 var config = require('../config');
 
 module.exports = {
-  options: {
-    },
-  src : "public/resources/sass/style.css"
+  est:{
+    files: { "resources/sass/style-prefixed.css" : "resources/sass/style.css"},
+  }
 }

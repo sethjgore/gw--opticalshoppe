@@ -1,4 +1,41 @@
-!function(global, factory) {
+!function(root, factory) {
+    "function" == typeof define && define.amd ? define([], factory) : "object" == typeof exports ? module.exports = factory : root.conditionizr = factory();
+}(this, function() {
+    "use strict";
+    var assets, exports = {}, head = document.head || document.getElementsByTagName("head")[0], _loader = function(testName, testDep, load) {
+        var path = load ? testName : assets + testName + ("style" === testDep ? ".css" : ".js");
+        switch (testDep) {
+          case "script":
+            var script = document.createElement("script");
+            script.src = path, head.appendChild(script);
+            break;
+
+          case "style":
+            var style = document.createElement("link");
+            style.href = path, style.rel = "stylesheet", head.appendChild(style);
+            break;
+
+          case "class":
+            document.documentElement.className += " " + testName;
+        }
+    };
+    return exports.config = function(config) {
+        var options = config || {}, tests = options.tests;
+        assets = options.assets || "";
+        for (var testName in tests) {
+            var newTest = testName.toLowerCase();
+            if (exports[newTest]) for (var testDeps = tests[testName], i = testDeps.length; i--; ) _loader(newTest, testDeps[i]);
+        }
+    }, exports.add = function(testName, testDeps, testFn) {
+        var newTest = testName.toLowerCase();
+        if (exports[newTest] = testFn(), exports[newTest]) for (var i = testDeps.length; i--; ) _loader(newTest, testDeps[i]);
+    }, exports.on = function(testName, testFn) {
+        var not = /^\!/;
+        (exports[testName.toLowerCase()] || not.test(testName) && !exports[testName.replace(not, "")]) && testFn();
+    }, exports.load = exports.polyfill = function(resource, testNames) {
+        for (var testDep = /\.js$/.test(resource) ? "script" : "style", i = testNames.length; i--; ) exports[testNames[i].toLowerCase()] && _loader(resource, testDep, !0);
+    }, exports;
+}), function(global, factory) {
     "object" == typeof module && "object" == typeof module.exports ? module.exports = global.document ? factory(global, !0) : function(w) {
         if (!w.document) throw new Error("jQuery requires a window with a document");
         return factory(w);
@@ -4133,8 +4170,10 @@
         startDragging: !1,
         afterLazyLoad: !1
     };
-}(jQuery, window, document), $(document).ready(function() {
-    $("#slider").owlCarousel({
+}(jQuery, window, document), conditionizr.add("ios", [], function() {
+    return /iP(ad|hone|od)/i.test(navigator.userAgent);
+}), conditionizr.load("resources/js/ios.js", [ "ios" ]), $(document).ready(function() {
+    $("html").addClass("onLoad"), $("#slider").owlCarousel({
         navigation: !1,
         slideSpeed: 300,
         paginationSpeed: 400,
@@ -4169,5 +4208,7 @@
             sortBy: "price",
             sortAscending: !1
         });
+    }), $(".nav__list a").click(function() {
+        $("#header__toggle").prop("checked", !1);
     });
 });

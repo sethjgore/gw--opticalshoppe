@@ -1,0 +1,10 @@
+body
+  +transition(opacity 1.0s ease-in 0s)
+  opacity: 0
+  &.isNotHome
+    opacity: 1
+
+.onLoad
+  body
+    +transition(opacity 1.0s ease-in 0s)
+    opacity: 1

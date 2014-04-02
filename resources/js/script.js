@@ -1,4 +1,12 @@
+conditionizr.add('ios', [], function () {
+  return /iP(ad|hone|od)/i.test(navigator.userAgent);
+});
+
+conditionizr.load('resources/js/ios.js', ['ios']);
+
 $(document).ready(function() {
+
+  $('html').addClass('onLoad');
 
   $("#slider").owlCarousel({
     navigation : false, // Show next and prev buttons
@@ -42,6 +50,12 @@ $(document).ready(function() {
 
    $('#merch-priceHigh').click(function(){
     $container.isotope({sortBy: 'price', sortAscending: false});
+  });
+
+  // Resets Mobile Nav Toggle Checkbox State when its children is clicked
+  // Implemented so even local anchors will close the menu
+  $('.nav__list a').click(function(){
+      $('#header__toggle').prop('checked', false);
   });
 
 });

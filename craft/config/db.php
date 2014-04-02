@@ -5,6 +5,12 @@
  *
  * All of your system's database configuration settings go in here.
  * You can see a list of the default settings in craft/app/etc/config/defaults/db.php
+* '0.0.0.0' => array(
+*		'server' => 'localhost',
+*		'user' => 'admin',
+*		'password' => 'admin',
+*		'database' => 'gatorworks--opticalshoppe',
+*	),
  */
 
 return array(
@@ -13,6 +19,12 @@ return array(
 		'tablePrefix' => 'craft'
 	),
 	'0.0.0.0' => array(
+		'server' => 'localhost',
+		'user' => 'admin',
+		'password' => 'admin',
+		'database' => 'gatorworks--opticalshoppe',
+	),
+	'192.168.0.6' => array(
 		'server' => 'localhost',
 		'user' => 'admin',
 		'password' => 'admin',
