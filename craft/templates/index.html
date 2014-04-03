@@ -3,77 +3,34 @@
 
 {% block content %}
 
-<section class="block__main">
-  <div class="main__box">
-    <article class="main__article">
-    	<h2 class="article__heading">
-        {{ entry.bodyHeadingCopy }}
-      </h2>
+<section class="block__home">
+  <div class="home__box">
+    <div class="home__body-box">
+      <article class="home__body">
+      	<h2 class="body__title">
+          {{ entry.bodyHeadingCopy }}
+        </h2>
 
-    	<div class="article__copy">
-        {{ entry.bodyCopy }}
-      </div>
-
-      <div class="article__goods">
-        {% for item in entry.goods %}
-          <div class="goods__box">
-            <a href="{{ item.linkingPage[0].url }}">
-              <img class="goods__image" src="{{ item.image[0].url}}">
-              <div class="goods__text">
-                <div class="goods__symbol">
-                  <i class="fa fa-2x fa-twitter"></i>
-                </div>
-                <div class="goods__heading">
-                  {{item.heading}}
-                </div>
-              </div>
-              <div class="goods__caption">
-                Click to view our eyeglasses!
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </article>
-
-
-    <aside class="main__aside">
-
-      <div class="storeline__panel">
-        <h3 class="storeline__text">
-          {{ entry.panelText}}
-        </h3>
-      </div>
-
-      <div class="storeline__collection">
-
-        <ul class="storeline__list">
-          {% for block in entry.collectionListLeft %}
-          <li class="list__item">
-            <div class="list__heading">
-              {{block.brandName}}
-            </div>
-            {{block.brandDescription}}
-          </li>
-          {% endfor %}
-        </ul>
-
-        <ul class="storeline__list">
-           {% for block in entry.collectionListRight %}
-          <li class="list__item">
-            <div class="list__heading">
-              {{block.brandName}}
-            </div>
-              {{block.brandDescription}}
-          </li>
-          {% endfor %}
-        </ul>
-
-      </div>
-
-    </aside>
-
-
+      	<div class="body__copy">
+          {{ entry.bodyCopy }}
+        </div>
+      <article>
+    </div>
+      {% for panel in entry.homePanels %}
+        <aside class="home__aside {{panel.backgroundColor}}">
+          {% if panel.imageOnTop %}
+            <img class="aside__image" src="{{ panel.image[0].url }}" alt="">
+            <h2 class="aside__heading">{{ panel.heading }}</h2>
+          {% else %}
+            <h2 class="aside__heading">{{ panel.heading }}</h2>
+            <img class="aside__image" src="{{ panel.image[0].url }}" alt="">
+          {% endif %}
+          <p class="aside__caption">{{panel.caption}}</p>
+          <a class="aside__button" href="{{panel.buttonUrl[0].url}}">
+              {{panel.button}}
+          </a>
+        </aside>
+      {% endfor %}
   </div>
 </section>
 	<!--<ul>

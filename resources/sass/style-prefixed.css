@@ -426,7 +426,7 @@ th {
   padding: 0; }
 
 /* line 1, base/_grid.sass */
-.oc, .header__block, .breadcrumbs__box, .footer__box, .moreinfo, .main__box, .merch__box, .merch__search-box {
+.oc, .header__block, .breadcrumbs__box, .footer__box, .moreinfo, .main__box, .merch__box, .merch__search-box, .home__box {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
@@ -435,22 +435,22 @@ th {
   display: block;
   padding: 0 4rem; }
   /* line 17, bourbon/addons/_clearfix.scss */
-  .oc:before, .header__block:before, .breadcrumbs__box:before, .footer__box:before, .moreinfo:before, .main__box:before, .merch__box:before, .merch__search-box:before, .oc:after, .header__block:after, .breadcrumbs__box:after, .footer__box:after, .moreinfo:after, .main__box:after, .merch__box:after, .merch__search-box:after {
+  .oc:before, .header__block:before, .breadcrumbs__box:before, .footer__box:before, .moreinfo:before, .main__box:before, .merch__box:before, .merch__search-box:before, .home__box:before, .oc:after, .header__block:after, .breadcrumbs__box:after, .footer__box:after, .moreinfo:after, .main__box:after, .merch__box:after, .merch__search-box:after, .home__box:after {
     content: " ";
     display: table; }
   /* line 23, bourbon/addons/_clearfix.scss */
-  .oc:after, .header__block:after, .breadcrumbs__box:after, .footer__box:after, .moreinfo:after, .main__box:after, .merch__box:after, .merch__search-box:after {
+  .oc:after, .header__block:after, .breadcrumbs__box:after, .footer__box:after, .moreinfo:after, .main__box:after, .merch__box:after, .merch__search-box:after, .home__box:after {
     clear: both; }
   /* line 17, bourbon/addons/_clearfix.scss */
-  .oc:before, .header__block:before, .breadcrumbs__box:before, .footer__box:before, .moreinfo:before, .main__box:before, .merch__box:before, .merch__search-box:before, .oc:after, .header__block:after, .breadcrumbs__box:after, .footer__box:after, .moreinfo:after, .main__box:after, .merch__box:after, .merch__search-box:after {
+  .oc:before, .header__block:before, .breadcrumbs__box:before, .footer__box:before, .moreinfo:before, .main__box:before, .merch__box:before, .merch__search-box:before, .home__box:before, .oc:after, .header__block:after, .breadcrumbs__box:after, .footer__box:after, .moreinfo:after, .main__box:after, .merch__box:after, .merch__search-box:after, .home__box:after {
     content: " ";
     display: table; }
   /* line 23, bourbon/addons/_clearfix.scss */
-  .oc:after, .header__block:after, .breadcrumbs__box:after, .footer__box:after, .moreinfo:after, .main__box:after, .merch__box:after, .merch__search-box:after {
+  .oc:after, .header__block:after, .breadcrumbs__box:after, .footer__box:after, .moreinfo:after, .main__box:after, .merch__box:after, .merch__search-box:after, .home__box:after {
     clear: both; }
   @media screen and (min-width: 768px) {
     /* line 1, base/_grid.sass */
-    .oc, .header__block, .breadcrumbs__box, .footer__box, .moreinfo, .main__box, .merch__box, .merch__search-box {
+    .oc, .header__block, .breadcrumbs__box, .footer__box, .moreinfo, .main__box, .merch__box, .merch__search-box, .home__box {
       padding: 0 4.5rem; } }
 
 /* line 12, base/_grid.sass */
@@ -520,7 +520,7 @@ label[role="menu-toggle"] i {
   font-weight: 400; }
 
 /* line 13, base/is/_is__text.sass */
-.is__text--light, p, h2, h3, blockquote, .component__contact h2, .promo__title, .component__panel, .panel--small, .tour__panel, .mDetail__panel, .main__aside .storeline__panel, .merch__panel, .breadcrumbs__title, .main__article .article__heading, .storeline__list .list__item, .merchitem__info, .merchitem__price, .merch__collection .collection__item {
+.is__text--light, p, h2, h3, blockquote, .component__contact h2, .promo__title, .component__panel, .panel--small, .tour__panel, .mDetail__panel, .home__aside, .main__aside .storeline__panel, .merch__panel, .home__body, .breadcrumbs__title, .main__article .article__heading, .storeline__list .list__item, .merchitem__info, .merchitem__price, .merch__collection .collection__item {
   font-weight: 300; }
 
 /* line 16, base/is/_is__text.sass */
@@ -545,7 +545,7 @@ label[role="menu-toggle"] i {
   text-align: right; }
 
 /* line 32, base/is/_is__text.sass */
-.is__text--uppercase, caption, .component__contact input[type='submit'], .promo__hanging, .merchitem__image:hover:before, .merchitem__serial, .mDetail__serial {
+.is__text--uppercase, caption, .component__contact input[type='submit'], .promo__hanging, .merchitem__image:hover:before, .merchitem__serial, .mDetail__serial, .home__body .body__title, .home__aside .aside__button {
   text-transform: uppercase; }
 
 /* line 35, base/is/_is__text.sass */
@@ -553,7 +553,7 @@ label[role="menu-toggle"] i {
   font-size: 33pt; }
 
 /* line 44, base/is/_is__text.sass */
-.is__text--size--milli, .panelGoods__caption, .main__article .goods__caption, .footer__menu, .footer__services, .footer__hours, .footer__location, .footer__legal, .merchitem__image:hover:before, .merch__collection .collection__item, .mDetail__brand, .mSearch__filter-list {
+.is__text--size--milli, .panelGoods__caption, .main__article .goods__caption, .footer__menu, .footer__services, .footer__hours, .footer__location, .footer__legal, .merchitem__image:hover:before, .merch__collection .collection__item, .mDetail__brand, .mSearch__filter-list, .home__aside .aside__caption, .home__aside .aside__button {
   font-size: 1.4rem; }
 
 /* line 47, base/is/_is__text.sass */
@@ -598,7 +598,7 @@ label[role="menu-toggle"] i {
   color: #ef4036; }
 
 /* line 9, base/is/_is__colors.sass */
-.is__background--c-red, .component__contact input[type='submit'], .component__panel, .panel--small, .tour__panel, .mDetail__panel, .main__aside .storeline__panel, .merch__panel, .panelGoods__symbol, .main__article .goods__symbol, .mSearch__filter-box, .block__frontgallery .owl-controls .owl-page.active span {
+.is__background--c-red, .component__contact input[type='submit'], .component__panel, .panel--small, .tour__panel, .mDetail__panel, .home__aside, .main__aside .storeline__panel, .merch__panel, .home__body, .panelGoods__symbol, .main__article .goods__symbol, .mSearch__filter-box, .block__frontgallery .owl-controls .owl-page.active span {
   background: #ef4036; }
 
 /* line 12, base/is/_is__colors.sass */
@@ -606,7 +606,7 @@ label[role="menu-toggle"] i {
   border-color: #ef4036; }
 
 /* line 5, base/is/_is__colors.sass */
-.is__text--c-white, h1, .component__contact input[type='submit'], .component__panel, .panel--small, .tour__panel, .mDetail__panel, .main__aside .storeline__panel, .merch__panel, .panelGoods__symbol i, .main__article .goods__symbol i, .panelGoods__heading, .main__article .goods__heading, #header__toggle:checked + label i, .main__article .article__copy, .storeline__list .list__heading, .merchitem__name, .merchitem__price, .mDetail__price, .mDetail__description, .mSearch__filter-title, .mSearch__filter-list li {
+.is__text--c-white, h1, .component__contact input[type='submit'], .component__panel, .panel--small, .tour__panel, .mDetail__panel, .home__aside, .main__aside .storeline__panel, .merch__panel, .home__body, .panelGoods__symbol i, .main__article .goods__symbol i, .panelGoods__heading, .main__article .goods__heading, #header__toggle:checked + label i, .main__article .article__copy, .storeline__list .list__heading, .merchitem__name, .merchitem__price, .mDetail__price, .mDetail__description, .mSearch__filter-title, .mSearch__filter-list li, .home__aside .aside__button {
   color: white; }
 
 /* line 9, base/is/_is__colors.sass */
@@ -618,11 +618,11 @@ label[role="menu-toggle"] i {
   border-color: white; }
 
 /* line 5, base/is/_is__colors.sass */
-.is__text--c-gray, .main__article .article__heading, .storeline__list .list__item, .merchitem__serial, .merch__collection .collection__item, .mDetail__serial, .mDetail__brand {
+.is__text--c-gray, .main__article .article__heading, .storeline__list .list__item, .merchitem__serial, .merch__collection .collection__item, .mDetail__serial, .mDetail__brand, .home__aside .aside__caption {
   color: #8c8c8c; }
 
 /* line 9, base/is/_is__colors.sass */
-.is__background--c-gray, #header__toggle:checked + label i {
+.is__background--c-gray, #header__toggle:checked + label i, .home__aside .aside__button {
   background: #8c8c8c; }
 
 /* line 12, base/is/_is__colors.sass */
@@ -682,7 +682,7 @@ label[role="menu-toggle"] i {
   color: #444444; }
 
 /* line 9, base/is/_is__colors.sass */
-.is__background--c-gray-darkest, .panelGoods__image, .main__article .goods__image {
+.is__background--c-gray-darkest, .panelGoods__image, .main__article .goods__image, .home__aside.gray {
   background: #444444; }
 
 /* line 12, base/is/_is__colors.sass */
@@ -694,7 +694,7 @@ label[role="menu-toggle"] i {
   color: #0d0d0d; }
 
 /* line 9, base/is/_is__colors.sass */
-.is__background--c-black, .panelGoods__text, .main__article .goods__text, body, .block__breadcrumbs, .block__footer, .tour__video, .merch__search-box {
+.is__background--c-black, .panelGoods__text, .main__article .goods__text, body, .block__breadcrumbs, .block__footer, .tour__video, .merch__search-box, .block__home, .home__aside.black {
   background: #0d0d0d; }
 
 /* line 12, base/is/_is__colors.sass */
@@ -873,15 +873,15 @@ a {
     padding: 0; }
 
 /* line 1, components/_panel.sass */
-.component__panel, .panel--small, .tour__panel, .mDetail__panel, .main__aside .storeline__panel, .merch__panel {
+.component__panel, .panel--small, .tour__panel, .mDetail__panel, .home__aside, .main__aside .storeline__panel, .merch__panel, .home__body {
   padding: 2.2rem; }
   @media screen and (min-width: 900px) {
     /* line 1, components/_panel.sass */
-    .component__panel, .panel--small, .tour__panel, .mDetail__panel, .main__aside .storeline__panel, .merch__panel {
+    .component__panel, .panel--small, .tour__panel, .mDetail__panel, .home__aside, .main__aside .storeline__panel, .merch__panel, .home__body {
       padding: 2.5rem; } }
 
 /* line 10, components/_panel.sass */
-.panel--small, .tour__panel, .mDetail__panel {
+.panel--small, .tour__panel, .mDetail__panel, .home__aside {
   padding: 1.5rem; }
 
 /* line 14, components/_panel.sass */
@@ -2039,6 +2039,92 @@ body {
     border: #c7c7c7 0.3rem solid !important;
     -webkit-box-shadow: 0 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.5) !important;
     box-shadow: 0 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.5) !important; }
+
+@media screen and (min-width: 768px) {
+  /* line 5, ui/_home.sass */
+  .home__body, .home__aside {
+    height: 40rem; } }
+@media screen and (min-width: 900px) {
+  /* line 5, ui/_home.sass */
+  .home__body, .home__aside {
+    height: 30rem; } }
+
+/* line 11, ui/_home.sass */
+.home__body-box {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 100%; }
+  /* line 40, neat/grid/_span-columns.scss */
+  .home__body-box:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    /* line 11, ui/_home.sass */
+    .home__body-box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      /* line 40, neat/grid/_span-columns.scss */
+      .home__body-box:last-child {
+        margin-right: 0; } }
+
+/* line 18, ui/_home.sass */
+.home__body .body__title {
+  margin-top: 0rem; }
+
+/* line 23, ui/_home.sass */
+.home__aside {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 65.05695%;
+  margin-left: 17.47153%;
+  position: relative; }
+  /* line 40, neat/grid/_span-columns.scss */
+  .home__aside:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 500px) {
+    /* line 23, ui/_home.sass */
+    .home__aside {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 47.58542%;
+      margin-left: 34.94305%; }
+      /* line 40, neat/grid/_span-columns.scss */
+      .home__aside:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 768px) {
+    /* line 23, ui/_home.sass */
+    .home__aside {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      margin-left: 0%; }
+      /* line 40, neat/grid/_span-columns.scss */
+      .home__aside:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    /* line 23, ui/_home.sass */
+    .home__aside {
+      padding-bottom: 5.2rem; } }
+  /* line 40, ui/_home.sass */
+  .home__aside .aside__image {
+    width: 100%; }
+  /* line 43, ui/_home.sass */
+  .home__aside .aside__heading {
+    font-size: 1.8rem; }
+  /* line 46, ui/_home.sass */
+  .home__aside .aside__caption {
+    margin: 0;
+    line-height: 1.41em; }
+  /* line 52, ui/_home.sass */
+  .home__aside .aside__button {
+    padding: 0.4rem 1rem;
+    position: absolute;
+    bottom: 0; }
 
 /* line 11, plugins/traffic-light.scss */
 .traffic-light {

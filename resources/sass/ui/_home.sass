@@ -1,0 +1,64 @@
+.block__home
+  @extend .is__background--c-black
+.home__box
+  +oc
+%home__items--height
+  +media($tabletopish)
+    height: 40rem
+  +media($laptopish)
+    height: 30rem
+
+.home__body-box
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(6)
+.home__body
+  @extend .component__panel
+  @extend %home__items--height
+  .body__title
+    @extend .is__text--uppercase
+    margin-top: 0rem
+  .body__copy
+
+.home__aside
+  @extend %home__items--height
+  +span-columns(4)
+  +shift(1)
+  +media($tabletish)
+    +span-columns(3)
+    +shift(2)
+  +media($tabletopish)
+    +span-columns(3)
+    +shift(0)
+  @extend .panel--small
+
+  +media($mobileish)
+    padding-bottom: 5.2rem
+
+  position: relative
+
+  .aside__image
+    width: 100%
+
+  .aside__heading
+    font-size: 1.8rem
+
+  .aside__caption
+    @extend .is__text--size--milli
+    @extend .is__text--c-gray
+    margin: 0
+    line-height: 1.41em
+
+  .aside__button
+    @extend .is__text--size--milli
+    @extend .is__text--uppercase
+    @extend .is__background--c-gray
+    @extend .is__text--c-white
+    padding: .4rem 1rem
+    position: absolute
+    bottom: 0
+
+  &.black
+    @extend .is__background--c-black
+  &.gray
+    @extend .is__background--c-gray-darkest
