@@ -19,9 +19,13 @@ header
 //HEADER LOGO CONTAINER & COLUMN
 .header__logo-box
   +span-columns(2)
+  position: relative
+  z-index: 5
 
   +media($tabletopish)
     +span-columns(4 of 12)
+    height: 7.5rem
+
 
 //HEADER LOGO IMAGE
 .header__logo
