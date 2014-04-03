@@ -1,0 +1,6 @@
+<div class="block__frontgallery owl-carousel" id="slider">
+  {% for image in entry.homeGallery %}
+    <div class="fgallery__box" style="background: url('{{image.getUrl}}') no-repeat center center; background-size: cover;">
+    </div>
+  {% endfor%}
+</div>
