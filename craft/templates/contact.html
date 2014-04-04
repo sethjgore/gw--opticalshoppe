@@ -7,12 +7,19 @@
   <div class="contact__box">
     <div class="contact__info">
       <div class="contact__panel component__panel panel__text--large">
-        <h3><a class="contact__item is__text--size--mega" href=""><i class="fa fa-envelope fa-1x is__text--c-white"></i>{{ companyInfo.email }}</a></h3>
-        <h3><a class="contact__item is__text--size--mega" href=""><i class="fa fa-phone fa-1x is__text--c-white"></i>{{ companyInfo.phoneNumber }}</a></h3>
+        <h2>{{entry.bodyCopy}}</h2>
+        <h3><a class="contact__item is__text--size--mega" href="mailto:{{companyInfo.email}}"><i class="fa fa-envelope fa-1x is__text--c-white"></i>{{ companyInfo.email }}</a></h3>
+        <h3><a class="contact__item is__text--size--mega" href="tel:+{{companyInfo.phoneNumber}}"><i class="fa fa-phone fa-1x is__text--c-white"></i>{{ companyInfo.phoneNumber }}</a></h3>
+      </div>
+      <div class="contact__map">
+        {% set locations = craft.entries.section('contact').find() %}
+        {{ craft.smartMap.map(locations) }}
       </div>
     </div>
-    <div class="contact__map"></div>
-    <div class="contact__form"></div>
+
+    <div class="contact__form">
+      {% include 'partials/_contact.html' %}
+    </div>
   </div>
 </section>
   <!--<ul>
@@ -20,7 +27,5 @@
       <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
     {% endfor %}
   </ul>-->
-
-  {% include 'partials/_aside' %}
 
 {% endblock %}

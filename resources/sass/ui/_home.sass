@@ -14,7 +14,7 @@
 .home__body-box
   +span-columns(6)
   +media($tabletopish)
-    +span-columns(6)
+    +span-columns(6 of 12)
 .home__body
   @extend .component__panel
   @extend %home__items--height
@@ -27,8 +27,8 @@
   @extend %home__items--height
   +span-columns(6)
   +media($tabletopish)
-    +span-columns(3)
-    +shift(0)
+    +span-columns(3 of 12)
+    padding: 1rem
   @extend .panel--small
 
   +media($mobileish)
@@ -36,6 +36,7 @@
 
   position: relative
   +row
+
 
   .aside__box
     +span-columns(4)
@@ -54,6 +55,9 @@
 
   .aside__heading
     font-size: 1.8rem
+
+    &.no-margin
+      margin-top: 0
 
   .aside__caption
     @extend .is__text--size--milli

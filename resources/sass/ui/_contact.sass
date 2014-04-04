@@ -1,12 +1,28 @@
 .contact__box
   +oc
+  padding-top: 2.5rem
 .contact__info
   +span-columns(6)
   +media($tabletopish)
-    +span-columns(6)
-  +media($laptopish)
     +span-columns(6)
 
 .contact__item
   i
     padding-right: 1rem
+
+.contact__form
+  +span-columns(6)
+  +media($tabletopish)
+    +span-columns(6)
+    +omega
+    padding-left: 2rem
+
+  h2
+    @extend .is__text--c-white
+
+
+
+.contact__map
+  height: 15rem
+  .smartmap-mapcanvas
+    height: 15rem
