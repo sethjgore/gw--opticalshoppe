@@ -21,14 +21,14 @@
               <img class="goods__image" src="{{ item.image[0].url}}">
               <div class="goods__text">
                 <div class="goods__symbol">
-                  <i class="fa fa-2x fa-twitter"></i>
+                  <i class="fa fa-2x fa-{{item.icon}}"></i>
                 </div>
                 <div class="goods__heading">
                   {{item.heading}}
                 </div>
               </div>
               <div class="goods__caption">
-                Click to view our eyeglasses!
+                {{item.caption}}
               </div>
             </a>
           </div>

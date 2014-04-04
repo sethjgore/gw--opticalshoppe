@@ -1,0 +1,26 @@
+
+{% extends "_layout--main" %}
+
+{% block content %}
+
+<section class="block__main">
+  <div class="contact__box">
+    <div class="contact__info">
+      <div class="contact__panel component__panel panel__text--large">
+        <h3><a class="contact__item is__text--size--mega" href=""><i class="fa fa-envelope fa-1x is__text--c-white"></i>{{ companyInfo.email }}</a></h3>
+        <h3><a class="contact__item is__text--size--mega" href=""><i class="fa fa-phone fa-1x is__text--c-white"></i>{{ companyInfo.phoneNumber }}</a></h3>
+      </div>
+    </div>
+    <div class="contact__map"></div>
+    <div class="contact__form"></div>
+  </div>
+</section>
+  <!--<ul>
+    {% for entry in craft.entries.section('frames').limit(2).find() %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+    {% endfor %}
+  </ul>-->
+
+  {% include 'partials/_aside' %}
+
+{% endblock %}
