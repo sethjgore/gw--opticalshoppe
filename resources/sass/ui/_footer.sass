@@ -120,10 +120,8 @@
 
   .social__item
     //social media background
-    i:nth-of-type(odd)
-      @extend .is__text--c-gray-dark
-    //social media
-    i:nth-of-type(even)
+    i:first-child:hover
+      @extend .is__text--c-red
 
 
 .info__logo-box
@@ -145,3 +143,6 @@
     float: right
   +media($laptopish)
     float: left
+
+.social__item:hover .social__bg
+  @extend .is__text--c-red

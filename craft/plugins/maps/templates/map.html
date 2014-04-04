@@ -1,0 +1,14 @@
+<div id="{{ name ~ '-map' }}" class="fullwidth mapCanvas"></div>
+
+{% includeCssResource "maps/css/maps.css" %}
+{% set mapjs %}
+    var map;
+    google.maps.event.addDomListener(window, 'load', function() {
+        map = new Maps.Map(
+            "{{ name }}",
+            '{{ (markers is defined ? markers : null)|json_encode|raw }}',
+            '{{ (options is defined ? options : null)|json_encode|raw }}'
+        );
+    });
+{% endset %}
+{% includeJs mapjs %}

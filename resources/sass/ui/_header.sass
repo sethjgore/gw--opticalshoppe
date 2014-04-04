@@ -14,6 +14,10 @@ header
   +oc
   @extend %header__height
 
+  //to contain social icons' absolute position
+  +media($laptopish)
+    position: relative
+
 
 
 //HEADER LOGO CONTAINER & COLUMN
@@ -23,8 +27,11 @@ header
   z-index: 5
 
   +media($tabletopish)
-    +span-columns(4 of 12)
+    +span-columns(2 of 12)
     height: 7.5rem
+
+  +media($laptopish)
+    +span-columns(4 of 12)
 
 
 //HEADER LOGO IMAGE
@@ -46,15 +53,18 @@ header
     height: 15rem
     +transform(translateY(2.5rem))
 
+
 //HEADER NAV CONTAINER & COLUMN
 .header__nav-box
   +span-columns(4)
   +omega
   +media($tabletopish)
-    +span-columns(7 of 12)
-  +media($laptopish)
     +span-columns(6 of 12)
-    +shift(1)
+
+  +media($laptopish)
+    +span-columns(8 of 12)
+    +omega
+
 
 
 //NAVIGATION TOGGLE
@@ -117,6 +127,10 @@ label[role="menu-toggle"]
   +media($tabletopish)
     flex-direction: row
 
+  +media($laptopish)
+    //adds space on the top to accomodate social icons
+    padding-top: 5rem
+
   @extend .is__background--c-white
   padding: 0
 
@@ -154,6 +168,10 @@ label[role="menu-toggle"]
     border-left-style: solid
     padding-left: 1.9vw
 
+    +media($laptopish)
+      padding-left: 4.6vw
+
+
     &:hover
       @extend .is__text--c-red
 
@@ -163,7 +181,21 @@ label[role="menu-toggle"]
 
 .header__social
   display: none
-  position: absolute
   li
     @extend .is__this--inline
     @extend .is__text--unbulleted
+
+  +media($tabletopish)
+    display: block
+    +span-columns(4)
+
+  .block__social
+    text-align: right
+    padding-left: 0
+
+  +media($laptopish)
+    position: absolute
+    //follows the .oc padding
+    padding-right: 4.5rem
+    right: 0
+

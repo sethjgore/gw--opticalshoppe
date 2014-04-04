@@ -1,0 +1,49 @@
+{% includeCssResource "maps/css/maps.css" %}
+
+{% import "_includes/forms" as forms %}
+
+<div class="field">
+    <p class="instructions">You can enter an address and press the 'Enter' key to geocode it.</p>
+    <input id="{{ id ~ '-address' }}" class="text address fullwidth" placeholder="Ex: Paris, Tour Eiffel"/>
+    <div id="{{ id ~ '-spinner' }}" class="spinner hidden"></div>
+</div>
+<p class="instructions">You can add a marker by clicking on the map and you can remove a marker by clicking on it again.</p>
+<div class="mapContainer">
+    <div id="{{ id ~ '-map' }}" class="fullwidth mapCanvas"></div>
+</div>
+<div class="field">
+    <div class="grid">
+        <div class="col col50">
+            <div class="col-inner">
+                {{ forms.textField({
+                    label: "Latitude"|t,
+                    id: id ~ '-lat',
+                    name: name ~ '[lat]',
+                    value: (value ? value.lat : null)
+                }) }}
+            </div>
+        </div>
+        <div class="col col50">
+            <div class="col-inner">
+                {{ forms.textField({
+                    label: "Longitude"|t,
+                    id: id ~ '-lng',
+                    name: name ~ '[lng]',
+                    value: (value ? value.lng : null)
+                }) }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% set mapjs %}
+    var map;
+    google.maps.event.addDomListener(window, 'load', function() {
+        map = new Maps.LocationFieldType(
+            "{{ id | namespaceInputId }}",
+            {{ (value.lat is defined ? value.lat : 'null') }},
+            {{ (value.lat is defined ? value.lng : 'null') }}
+        );
+    });
+{% endset %}
+{% includeJs mapjs %}
