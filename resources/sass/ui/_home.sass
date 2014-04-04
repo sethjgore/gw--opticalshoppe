@@ -2,6 +2,9 @@
   @extend .is__background--c-black
 .home__box
   +oc
+  +media($mobileish)
+    padding: 0
+
 %home__items--height
   +media($tabletopish)
     height: 40rem
@@ -22,11 +25,7 @@
 
 .home__aside
   @extend %home__items--height
-  +span-columns(4)
-  +shift(1)
-  +media($tabletish)
-    +span-columns(3)
-    +shift(2)
+  +span-columns(6)
   +media($tabletopish)
     +span-columns(3)
     +shift(0)
@@ -36,9 +35,22 @@
     padding-bottom: 5.2rem
 
   position: relative
+  +row
 
+  .aside__box
+    +span-columns(4)
+    +shift(1)
+    @extend .is__text--centered
+    +media($tabletish)
+      +span-columns(4)
+      text-align: left
+      padding: 2rem 0 0 0
+    +media($tabletopish)
+      +span-columns(12)
+      +shift(0)
+      padding: inherit
   .aside__image
-    width: 100%
+    max-width: 100%
 
   .aside__heading
     font-size: 1.8rem
