@@ -3,6 +3,14 @@
 
     <div class="footer__menu-box">
         <ul class="footer__menu">
+        {% set pages = craft.entries.section('mainMenu') %}
+        {% nav each in pages %}
+          {% if each.depth == 1%}
+            <li class="footer__list">
+              <a href="{{each.linkedPage[0].url}}">{{ each.title }}</a>
+            </li>
+           {% endif%}
+        {% endnav %}
         </ul>
     </div>
 

@@ -20,7 +20,7 @@
                     <ul class="nav__submenu">
                       {% for child in each.getDescendants(1) %}
                        <li class="nav__sublist">
-                       <a href="{{child.url}}">
+                       <a href="{{child.linkedPage[0].url}}">
                         {{child.title}}</a></li>
                       {% endfor %}
                     </ul>

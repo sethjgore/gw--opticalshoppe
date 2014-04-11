@@ -159,6 +159,7 @@ label[role="menu-toggle"]
 
     border-bottom-style: solid
     border-bottom-width: 1px
+    border-left: none
 
     a
       border: none !important
@@ -188,16 +189,18 @@ label[role="menu-toggle"]
   display: none
   position: absolute
   @extend .is__text--unbulleted
-  padding: 0
+  padding: 1rem 0 0 0
   top: 3.5rem
 
   .nav__sublist
-    padding: 1rem
+    padding: 1rem 2rem
     @extend .is__background--c-red
+    @extend .is__text--light
     @extend .is__text--c-white
     border-color: rgb(159, 24, 24)
     border-bottom-style: solid
     border-bottom-width: 1px
+    @extend .is__text--centered
 
     &:hover
       @extend .is__text--c-black
