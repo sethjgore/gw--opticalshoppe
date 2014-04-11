@@ -1,5 +1,7 @@
 header
   @extend .is__background--c-white
+  position: relative
+  z-index: 1000
 
 //SETS HEIGHT OF THE HEADER
 //allows easy extending to the nav header so the links can be centered
@@ -121,7 +123,7 @@ label[role="menu-toggle"]
   margin: 0
 
   flex-flow: column wrap
-  justify-content: space-between
+  justify-content: flex-end
   align-items: center
 
   +media($tabletopish)
@@ -144,7 +146,11 @@ label[role="menu-toggle"]
 .nav__list
   font-size: 2rem
   @extend .is__text--unbulleted
-  @extend .is__border--c-gray
+  @extend .is__border--c-gray-light
+  border-left-width: .1rem
+  border-left-style: solid
+  padding: .5rem 1vw
+  position: relative
 
   +media($mobileish)
     padding: 1.5rem 0rem 3rem 4rem
@@ -161,23 +167,50 @@ label[role="menu-toggle"]
     &:last-child
       box-shadow: 0 1rem 0.5rem rgba(0,0,0,.5)
 
-  a
-
-    @extend .is__border--c-gray-light
-    border-left-width: .1rem
-    border-left-style: solid
-    padding-left: 1.9vw
-
-    +media($laptopish)
-      padding-left: 4.6vw
 
 
-    &:hover
-      @extend .is__text--c-red
+
+  +media($laptopish)
+    padding: .5rem 2.3vw
+
+  &:hover
+    @extend .is__text--c-red
+    //@extend .is__text--c-white
+    //@extend .is__background--c-gray-dark
+    //@extend .is__border--c-gray-dark
 
   &:first-child
-    a
+    +media($tabletopish)
       border: none
+
+
+.nav__submenu
+  display: none
+  position: absolute
+  @extend .is__text--unbulleted
+  padding: 0
+  top: 4.5rem
+
+  .nav__sublist
+    padding: 1rem
+    @extend .is__background--c-red
+    @extend .is__text--c-white
+    border-color: rgb(159, 24, 24)
+    border-bottom-style: solid
+    border-bottom-width: 1px
+
+    &:hover
+      @extend .is__text--c-black
+
+
+//Nav Sublist Hide/Reveal Toggle
+.nav__list:hover
+  +media($tabletopish)
+  .nav__submenu
+    display: block
+
+
+
 
 .header__social
   display: none
