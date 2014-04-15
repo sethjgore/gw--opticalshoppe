@@ -35,7 +35,7 @@ return array(
             'fileSystemPath' => '/'
         )
     ),
-    'gww.gwwork.com' => array(
+    'opticalshoppe.gatorworks.com' => array(
       'devMode' => true,
       'useCompressedJs' => false,
       'environmentVariables' => array(
