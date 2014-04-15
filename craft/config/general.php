@@ -35,6 +35,14 @@ return array(
             'fileSystemPath' => '/'
         )
     ),
+    'gww.gwwork.com' => array(
+      'devMode' => true,
+      'useCompressedJs' => false,
+      'environmentVariables' => array(
+            'siteUrl'        => 'http://opticalshoppe.gatorworks.com/',
+            'fileSystemPath' => '/'
+        )
+    ),
     'clients.sjgore.com' => array(
       'useCompressedJs' => false,
       'environmentVariables' => array(
