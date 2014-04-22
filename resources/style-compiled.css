@@ -2227,21 +2227,6 @@ label[role="menu-toggle"] i {
 .mSearch__filter-list .selected li {
   border-color: rgba(0, 0, 0, 0.2); }
 
-/* line 1, ui/_onLoad.sass */
-body {
-  -webkit-transition: opacity 1s ease-in 0s;
-  transition: opacity 1s ease-in 0s;
-  opacity: 0; }
-  /* line 4, ui/_onLoad.sass */
-  body.isNotHome {
-    opacity: 1; }
-
-/* line 8, ui/_onLoad.sass */
-.onLoad body {
-  -webkit-transition: opacity 1s ease-in 0s;
-  transition: opacity 1s ease-in 0s;
-  opacity: 1; }
-
 /* line 2, ui/_front-gallery.sass */
 .fgallery__box {
   width: 100%;

@@ -36,12 +36,6 @@ return array(
 		'password' => 'Thenumber3',
 		'database' => 'optical_shoppe',
 	),
-	'opticalshoppe.gatorworks.net' => array(
-		'server' => 'localhost',
-		'user' => 'optical_admin',
-		'password' => 'Thenumber3',
-		'database' => 'optical_shoppe',
-	),
 	'clients.sjgore.com' => array(
 		'server' => 'db521006607.db.1and1.com',
 		'user' => 'dbo521006607',
