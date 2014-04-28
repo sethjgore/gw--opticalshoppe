@@ -28,15 +28,12 @@ return array(
         )
     ),
     'gww.gwwork.com' => array(
-      'devMode' => true,
-      'useCompressedJs' => false,
       'environmentVariables' => array(
             'siteUrl'        => 'http://gww.gwwork.com/~optical/',
             'fileSystemPath' => '/'
         )
     ),
     'clients.sjgore.com' => array(
-      'useCompressedJs' => false,
       'environmentVariables' => array(
             'siteUrl'        => 'http://clients.sjgore.com/',
             'fileSystemPath' => '/'

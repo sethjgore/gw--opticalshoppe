@@ -12,7 +12,7 @@
           <ul class="nav__menu">
             {% set pages = craft.entries.section('mainMenu') %}
              {% nav each in pages %}
-              {% if each.depth == 1%}
+              {% if each.level == 1%}
                 <li class="nav__list">
                   <a href="{{each.linkedPage[0].url}}">{{ each.title }}</a>
 
